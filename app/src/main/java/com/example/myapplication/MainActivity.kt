@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -18,6 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.example.myapplication.ui.theme.MyApplicationTheme
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,14 +30,63 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
+
                 ) {
-                    Column {
-                        Greeting("Takuma")
-                        Message("Takuma", "Hello")
-                        MyButton()
-                        Counter()
-                        Toggle()
-                        Input()
+                    Row (
+                        verticalAlignment = Alignment.,
+                        horizontalArrangement = Arrangement.Center
+                    ){
+                        Column(){
+                            Greeting("Takuma")
+                            Message("Takuma", "Hello")
+                            MyButton()
+                            Counter()
+                            Toggle()
+                            Input()
+                        }
+
+                    }
+                    Row (
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.Center
+                    ){
+                        Column(){
+                            Greeting("Takuma")
+                            Message("Takuma", "Hello")
+                            MyButton()
+                            Counter()
+                            Toggle()
+                            Input()
+                        }
+
+                    }
+                    Row (
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.Center
+                    ){
+                        Column(){
+                            Greeting("Takuma")
+                            Message("Takuma", "Hello")
+                            MyButton()
+                            Counter()
+                            Toggle()
+                            Input()
+                        }
+
+                    }
+                    Row (
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.Center
+                    ){
+                        Column(){
+                            Greeting("Takuma")
+                            Message("Takuma", "Hello")
+                            MyButton()
+                            Counter()
+                            Toggle()
+                            Input()
+                        }
+
                     }
                 }
             }
