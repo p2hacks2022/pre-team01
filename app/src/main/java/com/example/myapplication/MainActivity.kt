@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -20,6 +21,7 @@ import androidx.compose.ui.unit.sp
 import com.example.myapplication.ui.theme.MyApplicationTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.res.painterResource
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,6 +53,10 @@ class MainActivity : ComponentActivity() {
                             Counter()
                             Toggle()
                             Input()
+                            Image(
+                                painter = painterResource(R.drawable.a),
+                                contentDescription = "fire image"
+                            )
                         }
 
                     }
@@ -130,7 +136,7 @@ fun Input(){
     Column{
         TextField(
             value = input,
-            onValueChange = { input =it }
+            onValueChange = { input = it }
         )
         Button(onClick = {
             input = ""
