@@ -33,16 +33,11 @@ class MainActivity : ComponentActivity() {
 
                 ) {
                     Row (
-                        verticalAlignment = Alignment.,
+                        verticalAlignment = Alignment.Top,
                         horizontalArrangement = Arrangement.Center
                     ){
                         Column(){
                             Greeting("Takuma")
-                            Message("Tak", "Hello")
-                            MyButton()
-                            Counter()
-                            Toggle()
-                            Input()
                         }
 
                     }
@@ -51,7 +46,6 @@ class MainActivity : ComponentActivity() {
                         horizontalArrangement = Arrangement.Center
                     ){
                         Column(){
-                            Greeting("Takuma")
                             Message("Takuma", "Hello")
                             MyButton()
                             Counter()
@@ -60,34 +54,8 @@ class MainActivity : ComponentActivity() {
                         }
 
                     }
-                    Row (
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center
-                    ){
-                        Column(){
-                            Greeting("Takuma")
-                            Message("Takuma", "Hello")
-                            MyButton()
-                            Counter()
-                            Toggle()
-                            Input()
-                        }
 
-                    }
-                    Row (
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center
-                    ){
-                        Column(){
-                            Greeting("Takuma")
-                            Message("Takuma", "Hello")
-                            MyButton()
-                            Counter()
-                            Toggle()
-                            Input()
-                        }
 
-                    }
                 }
             }
         }
