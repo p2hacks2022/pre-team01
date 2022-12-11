@@ -38,7 +38,7 @@ class MainActivity : ComponentActivity() {
                     ){
                         Column(){
                             Greeting("Takuma")
-                            Message("Takuma", "Hello")
+                            Message("Tak", "Hello")
                             MyButton()
                             Counter()
                             Toggle()
