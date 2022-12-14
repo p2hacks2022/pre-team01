@@ -7,61 +7,47 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Person
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.sp
-import com.example.myapplication.ui.theme.MyApplicationTheme
-import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.res.painterResource
+import androidx.navigation.NavType
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MyApplicationTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-
-                ) {
-                    Row (
-                        verticalAlignment = Alignment.Top,
-                        horizontalArrangement = Arrangement.Center
-                    ){
-                        Column(){
-                            Greeting("Takuma")
-                        }
-
+            val navController = rememberNavController()
+            NavHost(navController = navController, startDestination = "screen1") {
+                composable(route = "screen1") {
+                    Screen1 (){ screenName ->
+                        navController.navigate(screenName)
                     }
-                    Row (
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center
-                    ){
-                        Column(){
-                            Message("Takuma", "Hello")
-                            MyButton()
-                            Counter()
-                            Toggle()
-                            Input()
-                            Image(
-                                painter = painterResource(R.drawable.a),
-                                contentDescription = "fire image"
-                            )
-                        }
-
+                }
+                composable(route = "screen2",) {
+                    Screen2 {
+                        navController.navigate("screen1")
                     }
-
-
+                }
+                composable(route = "screen3",) {
+                    Screen3 {
+                        navController.navigate("screen1")
+                    }
+                }
+                composable(route = "screen4",) {
+                    Screen4 {
+                        navController.navigate("screen1")
+                    }
+                }
+                composable(route = "screen5",) {
+                    Screen5 {
+                        navController.navigate("screen1")
+                    }
                 }
             }
         }
@@ -69,78 +55,84 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hi $name!", fontSize = 30.sp)
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    MyApplicationTheme {
-        Column {
-            Greeting("Android")
-            Message(username = "takuma", body = "hello")
-        }
-    }
-}
-
-@Composable
-fun Message(username: String, body: String) {
+fun Screen1(toNextScreen: (String) -> Unit = {}) {
     Column {
-        Row {
-            Icon(Icons.Default.Person, contentDescription = "person")
-            Text(text = username)
+        Text(text = "Screen 1")
+        Button(onClick = { toNextScreen("screen2")  }) {
+            Text(text = "2")
         }
-    }
-    Text(text = body)
-}
-
-@Composable
-fun MyButton(){
-    Button(
-        onClick = { println("Hello, World")}
-    ){
-        Text(text = "Click")
-    }
-}
-
-@Composable
-fun Counter(){
-    var count by remember { mutableStateOf(0) }
-    Column{
-        Text(text = "Count: $count")
-        Button(
-            onClick = { count++}
-        ){
-            Text(text = "Click")
+        Button(onClick = { toNextScreen("screen3") }) {
+            Text(text = "3")
+        }
+        Button(onClick = { toNextScreen("screen4") }) {
+            Text(text = "4")
+        }
+        Button(onClick = { toNextScreen("screen5") }) {
+            Text(text = "5")
         }
     }
 }
 
 @Composable
-fun Toggle(){
-    var showText by remember { mutableStateOf(true) }
-    Column{
-        Button(onClick = { showText = !showText}) {
-            Text(text = "Click")
-        }
-        if (showText){
-            Text(text = "Hello")
+fun Screen2(toNextScreen: ()->Unit = {}) {
+    Column {
+        Text(text = "Screen 2")
+        Button(onClick = { toNextScreen() }) {
+            Text(text = "Back")
         }
     }
 }
 
 @Composable
-fun Input(){
-    var input by remember { mutableStateOf("") }
-    Column{
-        TextField(
-            value = input,
-            onValueChange = { input = it }
+fun Screen3(toNextScreen: ()->Unit = {}) {
+    Column {
+        Text(text = "Screen 3")
+        Button(onClick = { toNextScreen() }) {
+            Text(text = "Back")
+        }
+    }
+}
+
+@Composable
+fun Screen4(toNextScreen: ()->Unit = {}) {
+    Column {
+        Text(text = "Screen 4")
+        Button(onClick = { toNextScreen() }) {
+            Text(text = "Back")
+        }
+    }
+}
+
+@Composable
+fun Screen5(toNextScreen: ()->Unit = {}) {
+    Column {
+        Text(text = "Screen 5")
+        Button(onClick = { toNextScreen() }) {
+            Text(text = "Back")
+        }
+    }
+}
+
+
+@Composable
+fun IconButtonSample(fileid: Int, filedescription: String) {
+    IconButton(onClick = { /* Do something */ }) {
+        Image(
+            painter = painterResource(fileid),
+            contentDescription = filedescription
         )
-        Button(onClick = {
-            input = ""
-        }) { Text(text = "Send")}
+    }
+}
+
+@Composable
+fun MainScreen(onClickButton: (String, Int)->Unit = { _,_ -> }) {
+    Row (
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.Center
+    ){
+        Column(){
+
+            IconButtonSample(R.drawable.a,"fire")                     }
 
     }
 }
