@@ -1,13 +1,14 @@
 package com.example.myapplication
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.myapplication.ui.theme.*
+
 
 @Composable
 fun MainScreen(toNextScreen: (String) -> Unit = {}) {
@@ -65,13 +66,18 @@ fun Screen4F(toNextScreen: ()->Unit = {}) {
 
 @Composable
 fun Screen5F(toNextScreen: (String)->Unit = {}) {
-    Column {
+
+    Column (
+        Modifier
+            .fillMaxSize()
+    ){
         Text(text = "5F")
-        Column{
-            Button(onClick = { toNextScreen("main") },
-            Modifier.padding(10.dp)) {
-                Text(text = "Back")
-            }
+        ZoomImageSample()
+        Row(
+            Modifier
+                .fillMaxSize(),
+            verticalAlignment = Alignment.Bottom ,
+        ) {
             Button(onClick = { toNextScreen("toilet1") },
                 Modifier.padding(10.dp)) {
                 Text(text = "Toilet1")
@@ -84,6 +90,11 @@ fun Screen5F(toNextScreen: (String)->Unit = {}) {
                 Modifier.padding(10.dp)) {
                 Text(text = "Toilet3")
             }
+            Button(onClick = { toNextScreen("main") },
+                Modifier.padding(10.dp)) {
+                Text(text = "Back")
+            }
+
         }
 
     }
@@ -118,3 +129,4 @@ fun ScreenRank(toNextScreen: ()->Unit = {}) {
         }
     }
 }
+
