@@ -1,21 +1,13 @@
 package com.example.myapplication.ui.theme
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.size
 import androidx.compose.material.IconButton
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.unit.dp
 
 @Composable
 fun IconButtonSample_1F(fileid: Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
-    IconButton(
-        onClick = { toNextScreen("1F")  },
-        modifier = Modifier.size(120.dp)
-    ) {
+    IconButton(onClick = { toNextScreen("1F")  }) {
         Image(
             painter = painterResource(fileid),
             contentDescription = filedescription
@@ -25,10 +17,7 @@ fun IconButtonSample_1F(fileid: Int, filedescription: String, toNextScreen: (Str
 
 @Composable
 fun IconButtonSample_2F(fileid: Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
-    IconButton(
-        onClick = { toNextScreen("1F")  },
-        modifier = Modifier.size(120.dp)
-    ) {
+    IconButton(onClick = { toNextScreen("2F")  }) {
         Image(
             painter = painterResource(fileid),
             contentDescription = filedescription
@@ -38,10 +27,7 @@ fun IconButtonSample_2F(fileid: Int, filedescription: String, toNextScreen: (Str
 
 @Composable
 fun IconButtonSample_3F(fileid: Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
-    IconButton(
-        onClick = { toNextScreen("1F")  },
-        modifier = Modifier.size(120.dp)
-    ) {
+    IconButton(onClick = { toNextScreen("3F")  }) {
         Image(
             painter = painterResource(fileid),
             contentDescription = filedescription
@@ -51,10 +37,7 @@ fun IconButtonSample_3F(fileid: Int, filedescription: String, toNextScreen: (Str
 
 @Composable
 fun IconButtonSample_4F(fileid: Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
-    IconButton(
-        onClick = { toNextScreen("1F")  },
-        modifier = Modifier.size(110.dp)
-    ) {
+    IconButton(onClick = { toNextScreen("4F")  }) {
         Image(
             painter = painterResource(fileid),
             contentDescription = filedescription
@@ -64,10 +47,7 @@ fun IconButtonSample_4F(fileid: Int, filedescription: String, toNextScreen: (Str
 
 @Composable
 fun IconButtonSample_5F(fileid: Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
-    IconButton(
-        onClick = { toNextScreen("1F")  },
-        modifier = Modifier.size(120.dp)
-    ) {
+    IconButton(onClick = { toNextScreen("5F")  }) {
         Image(
             painter = painterResource(fileid),
             contentDescription = filedescription
@@ -77,10 +57,7 @@ fun IconButtonSample_5F(fileid: Int, filedescription: String, toNextScreen: (Str
 
 @Composable
 fun IconButtonSample_R1F(fileid: Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
-    IconButton(
-        onClick = { toNextScreen("1F")  },
-        modifier = Modifier.size(110.dp)
-    ) {
+    IconButton(onClick = { toNextScreen("R1F")  }) {
         Image(
             painter = painterResource(fileid),
             contentDescription = filedescription
@@ -90,10 +67,7 @@ fun IconButtonSample_R1F(fileid: Int, filedescription: String, toNextScreen: (St
 
 @Composable
 fun IconButtonSample_R2F(fileid: Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
-    IconButton(
-        onClick = { toNextScreen("1F")  },
-        modifier = Modifier.size(120.dp)
-    ) {
+    IconButton(onClick = { toNextScreen("R2F")  }) {
         Image(
             painter = painterResource(fileid),
             contentDescription = filedescription
@@ -103,10 +77,7 @@ fun IconButtonSample_R2F(fileid: Int, filedescription: String, toNextScreen: (St
 
 @Composable
 fun IconButtonSample_rank(fileid: Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
-    IconButton(
-        onClick = { toNextScreen("rank") },
-        modifier = Modifier.size(80.dp)
-    ) {
+    IconButton(onClick = { toNextScreen("rank") }) {
         Image(
             painter = painterResource(fileid),
             contentDescription = filedescription
