@@ -18,15 +18,29 @@ fun MainScreen(toNextScreen: (String) -> Unit = {}) {
         painter = painterResource(R.drawable.logo_ver1),
         contentDescription = "logo",
     )
-    Column {
-        IconButtonSample_5F(R.drawable.fun_5_text,"5F"){ toNextScreen("5F")  }
-        IconButtonSample_4F(R.drawable.fun_4_text,"4F"){ toNextScreen("4F")  }
-        IconButtonSample_5F(R.drawable.fun_3_text,"3F"){ toNextScreen("3F")  }
-        IconButtonSample_2F(R.drawable.fun_2_text,"2F"){ toNextScreen("2F")  }
-        IconButtonSample_1F(R.drawable.fun_1_text,"1F"){ toNextScreen("1F")  }
-        IconButtonSample_R1F(R.drawable.fun_research1_text,"R1F"){ toNextScreen("R1F")  }
-        IconButtonSample_R2F(R.drawable.fun_reserch2_text,"R2F"){ toNextScreen("R2F")  }
-        IconButtonSample_rank(R.drawable.a,"rank"){ toNextScreen("rank")  }
+    Row(
+        modifier = Modifier.fillMaxSize(),
+        horizontalArrangement = Arrangement.SpaceEvenly,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Column (){
+            IconButtonSample_5F(R.drawable.fun_5_text, "5F") { toNextScreen("5F") }
+            IconButtonSample_4F(R.drawable.fun_4_text, "4F") { toNextScreen("4F") }
+            IconButtonSample_5F(R.drawable.fun_3_text, "3F") { toNextScreen("3F") }
+            IconButtonSample_2F(R.drawable.fun_2_text, "2F") { toNextScreen("2F") }
+            IconButtonSample_1F(R.drawable.fun_1_text, "1F") { toNextScreen("1F") }
+        }
+        Column (){
+            IconButtonSample_R1F(R.drawable.fun_research1_text, "R1F") { toNextScreen("R1F") }
+            IconButtonSample_R2F(R.drawable.fun_reserch2_text, "R2F") { toNextScreen("R2F") }
+        }
+    }
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Bottom,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ){
+        IconButtonSample_rank(R.drawable.a, "rank") { toNextScreen("rank") }
     }
 }
 
