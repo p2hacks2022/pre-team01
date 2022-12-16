@@ -101,26 +101,10 @@ fun Screen4F(toNextScreen: () -> Unit = {}) {
     }
 }
 
-@Composable
-
-fun Screen5F(toNextScreen: (String) -> Unit = {}) {
-    Column {
-        Text(text = "5F")
-        Column {
-            Button(
-                onClick = { toNextScreen("main") },
-                Modifier.padding(10.dp)
-            ) {
-                Text(text = "Back")
-            }
-            Button(
-                onClick = { toNextScreen("toilet1") },
-                Modifier.padding(10.dp)
-            ) {
-
 fun Screen5F(toNextScreen: (String)->Unit = {}) {
+}
 
-    Column (
+    Column(
         Modifier
             .fillMaxSize()
     ){
@@ -172,17 +156,6 @@ fun ScreenR1F(toNextScreen: () -> Unit = {}) {
 fun ScreenR2F(toNextScreen: () -> Unit = {}) {
     Column {
         Text(text = "R2F")
-        Button(onClick = { toNextScreen() }) {
-            Text(text = "Back")
-        }
-    }
-}
-
-
-@Composable
-fun ScreenRank(toNextScreen: () -> Unit = {}) {
-    Column {
-        Text(text = "ranking")
         Button(onClick = { toNextScreen() }) {
             Text(text = "Back")
         }
