@@ -120,13 +120,4 @@ fun ScreenR2F(toNextScreen: ()->Unit = {}) {
     }
 }
 
-@Composable
-fun ScreenRank(toNextScreen: ()->Unit = {}) {
-    Column {
-        Text(text = "ranking")
-        Button(onClick = { toNextScreen() }) {
-            Text(text = "Back")
-        }
-    }
-}
 
