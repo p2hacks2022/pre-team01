@@ -17,7 +17,7 @@ fun ZoomImageSample() {
     var scale by remember { mutableStateOf(1f) }
     var offset by remember { mutableStateOf(Offset.Zero) }
     Image(
-        painter = painterResource(id = R.drawable.fun_5),
+        painter = painterResource(id = R.drawable.detail_5f),
         contentDescription = "Zoom_5F_Image",
         contentScale = ContentScale.Fit,
         modifier = Modifier
