@@ -40,8 +40,23 @@ class MainActivity : ComponentActivity() {
                     }
                 }
                 composable(route = "5F",) {
-                    Screen5F {
-                        navController.navigate("main")
+                    Screen5F { screenName ->
+                        navController.navigate(screenName)
+                    }
+                }
+                composable(route = "toilet1",) {
+                    ScreenToilet1 {
+                        navController.navigate("5F")
+                    }
+                }
+                composable(route = "toilet2",) {
+                    ScreenToilet2 {
+                        navController.navigate("5F")
+                    }
+                }
+                composable(route = "toilet3",) {
+                    ScreenToilet3 {
+                        navController.navigate("5F")
                     }
                 }
                 composable(route = "R1F",) {
