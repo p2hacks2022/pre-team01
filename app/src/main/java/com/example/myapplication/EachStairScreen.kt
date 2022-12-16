@@ -73,7 +73,7 @@ fun Screen4F(toNextScreen: ()->Unit = {}) {
 @Composable
 fun Screen5F(toNextScreen: (String)->Unit = {}) {
 
-    Column (
+    Column(
         Modifier
             .fillMaxSize()
     ){
@@ -125,5 +125,3 @@ fun ScreenR2F(toNextScreen: ()->Unit = {}) {
         }
     }
 }
-
-

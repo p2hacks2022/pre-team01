@@ -16,7 +16,7 @@ fun ScreenManToilet1(toNextScreen: ()->Unit = {}) {
             painter = painterResource(R.drawable.a),
             contentDescription = "toilet image",
         )
-        Text(text = "評価")
+        Text(text = "レビュー")
         Row(){
             IconToggleButtonSample()
             IconToggleButtonSample()
