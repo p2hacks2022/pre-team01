@@ -1,17 +1,24 @@
 package com.example.myapplication
 
+
 import androidx.compose.animation.shrinkHorizontally
+
+import androidx.compose.foundation.Image
+
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.myapplication.ui.theme.*
 
+
 @Composable
 fun MainScreen(toNextScreen: (String) -> Unit = {}) {
+
     Row(
         modifier = Modifier.fillMaxSize(),
         horizontalArrangement = Arrangement.SpaceEvenly,
@@ -36,6 +43,21 @@ fun MainScreen(toNextScreen: (String) -> Unit = {}) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         IconButtonSample_rank(R.drawable.a, "rank") { toNextScreen("rank") }
+
+    Image(
+        painter = painterResource(R.drawable.logo_ver1),
+        contentDescription = "logo",
+    )
+    Column {
+        IconButtonSample_5F(R.drawable.fun_5_text,"5F"){ toNextScreen("5F")  }
+        IconButtonSample_4F(R.drawable.fun_4_text,"4F"){ toNextScreen("4F")  }
+        IconButtonSample_5F(R.drawable.fun_3_text,"3F"){ toNextScreen("3F")  }
+        IconButtonSample_2F(R.drawable.fun_2_text,"2F"){ toNextScreen("2F")  }
+        IconButtonSample_1F(R.drawable.fun_1_text,"1F"){ toNextScreen("1F")  }
+        IconButtonSample_R1F(R.drawable.fun_research1_text,"R1F"){ toNextScreen("R1F")  }
+        IconButtonSample_R2F(R.drawable.fun_reserch2_text,"R2F"){ toNextScreen("R2F")  }
+        IconButtonSample_rank(R.drawable.a,"rank"){ toNextScreen("rank")  }
+
     }
 }
 
@@ -80,6 +102,7 @@ fun Screen4F(toNextScreen: () -> Unit = {}) {
 }
 
 @Composable
+
 fun Screen5F(toNextScreen: (String) -> Unit = {}) {
     Column {
         Text(text = "5F")
@@ -94,6 +117,23 @@ fun Screen5F(toNextScreen: (String) -> Unit = {}) {
                 onClick = { toNextScreen("toilet1") },
                 Modifier.padding(10.dp)
             ) {
+
+fun Screen5F(toNextScreen: (String)->Unit = {}) {
+
+    Column (
+        Modifier
+            .fillMaxSize()
+    ){
+        Text(text = "5F")
+        ZoomImageSample()
+        Row(
+            Modifier
+                .fillMaxSize(),
+            verticalAlignment = Alignment.Bottom ,
+        ) {
+            Button(onClick = { toNextScreen("toilet1") },
+                Modifier.padding(10.dp)) {
+
                 Text(text = "Toilet1")
             }
             Button(
@@ -108,6 +148,11 @@ fun Screen5F(toNextScreen: (String) -> Unit = {}) {
             ) {
                 Text(text = "Toilet3")
             }
+            Button(onClick = { toNextScreen("main") },
+                Modifier.padding(10.dp)) {
+                Text(text = "Back")
+            }
+
         }
 
     }
@@ -132,6 +177,7 @@ fun ScreenR2F(toNextScreen: () -> Unit = {}) {
         }
     }
 }
+
 
 @Composable
 fun ScreenRank(toNextScreen: () -> Unit = {}) {
