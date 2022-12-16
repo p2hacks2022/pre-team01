@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -15,6 +16,13 @@ fun ScreenManToilet1(toNextScreen: ()->Unit = {}) {
             painter = painterResource(R.drawable.a),
             contentDescription = "toilet image",
         )
+        Text(text = "評価")
+        Row(){
+            IconToggleButtonSample()
+            IconToggleButtonSample()
+            IconToggleButtonSample()
+        }
+        Text(text = "レビューを投稿できます")
         Input()
         Button(onClick = { toNextScreen() }) {
             Text(text = "Back")
