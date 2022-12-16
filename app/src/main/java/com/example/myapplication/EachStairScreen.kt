@@ -1,25 +1,31 @@
 package com.example.myapplication
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.myapplication.ui.theme.*
 
 
 @Composable
 fun MainScreen(toNextScreen: (String) -> Unit = {}) {
+    Image(
+        painter = painterResource(R.drawable.logo_ver1),
+        contentDescription = "logo",
+    )
     Column {
-        IconButtonSample_5F(R.drawable.fun_5,"5F"){ toNextScreen("5F")  }
-        IconButtonSample_4F(R.drawable.fun_4,"4F"){ toNextScreen("4F")  }
-        IconButtonSample_5F(R.drawable.fun_3,"3F"){ toNextScreen("3F")  }
-        IconButtonSample_2F(R.drawable.fun_2,"2F"){ toNextScreen("2F")  }
-        IconButtonSample_1F(R.drawable.fun_1,"1F"){ toNextScreen("1F")  }
-        IconButtonSample_R1F(R.drawable.fun_research1,"R1F"){ toNextScreen("R1F")  }
-        IconButtonSample_R2F(R.drawable.fun_reserch2,"R2F"){ toNextScreen("R2F")  }
+        IconButtonSample_5F(R.drawable.fun_5_text,"5F"){ toNextScreen("5F")  }
+        IconButtonSample_4F(R.drawable.fun_4_text,"4F"){ toNextScreen("4F")  }
+        IconButtonSample_5F(R.drawable.fun_3_text,"3F"){ toNextScreen("3F")  }
+        IconButtonSample_2F(R.drawable.fun_2_text,"2F"){ toNextScreen("2F")  }
+        IconButtonSample_1F(R.drawable.fun_1_text,"1F"){ toNextScreen("1F")  }
+        IconButtonSample_R1F(R.drawable.fun_research1_text,"R1F"){ toNextScreen("R1F")  }
+        IconButtonSample_R2F(R.drawable.fun_reserch2_text,"R2F"){ toNextScreen("R2F")  }
         IconButtonSample_rank(R.drawable.a,"rank"){ toNextScreen("rank")  }
     }
 }
@@ -120,13 +126,4 @@ fun ScreenR2F(toNextScreen: ()->Unit = {}) {
     }
 }
 
-@Composable
-fun ScreenRank(toNextScreen: ()->Unit = {}) {
-    Column {
-        Text(text = "ranking")
-        Button(onClick = { toNextScreen() }) {
-            Text(text = "Back")
-        }
-    }
-}
 

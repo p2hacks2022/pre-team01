@@ -45,7 +45,7 @@ class MainActivity : ComponentActivity() {
                     }
                 }
                 composable(route = "toilet1",) {
-                    ScreenToilet1 {
+                    ScreenManToilet1 {
                         navController.navigate("5F")
                     }
                 }
