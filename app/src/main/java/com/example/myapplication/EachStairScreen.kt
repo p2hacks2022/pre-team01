@@ -1,9 +1,12 @@
 package com.example.myapplication
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import com.example.myapplication.ui.theme.*
 
 @Composable
@@ -61,12 +64,28 @@ fun Screen4F(toNextScreen: ()->Unit = {}) {
 }
 
 @Composable
-fun Screen5F(toNextScreen: ()->Unit = {}) {
+fun Screen5F(toNextScreen: (String)->Unit = {}) {
     Column {
         Text(text = "5F")
-        Button(onClick = { toNextScreen() }) {
-            Text(text = "Back")
+        Column{
+            Button(onClick = { toNextScreen("main") },
+            Modifier.padding(10.dp)) {
+                Text(text = "Back")
+            }
+            Button(onClick = { toNextScreen("toilet1") },
+                Modifier.padding(10.dp)) {
+                Text(text = "Toilet1")
+            }
+            Button(onClick = { toNextScreen("toilet2") },
+                Modifier.padding(10.dp)) {
+                Text(text = "Toilet2")
+            }
+            Button(onClick = { toNextScreen("toilet3") },
+                Modifier.padding(10.dp)) {
+                Text(text = "Toilet3")
+            }
         }
+
     }
 }
 
