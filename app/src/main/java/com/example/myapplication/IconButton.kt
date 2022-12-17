@@ -31,7 +31,7 @@ fun IconButtonSample_2F(fileid: Int, filedescription: String, toNextScreen: (Str
     IconButton(
         onClick = { toNextScreen("2F")  },
         modifier = Modifier
-            .width(100.dp)
+            .width(120.dp)
             .height(120.dp)
             .padding(start = 8.dp)
     ) {
@@ -46,7 +46,8 @@ fun IconButtonSample_2F(fileid: Int, filedescription: String, toNextScreen: (Str
 fun IconButtonSample_3F(fileid: Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
     IconButton(
         onClick = { toNextScreen("3F")  },
-        modifier = Modifier.size(120.dp)
+        modifier = Modifier
+            .size(120.dp)
     ) {
         Image(
             painter = painterResource(fileid),
@@ -59,7 +60,8 @@ fun IconButtonSample_3F(fileid: Int, filedescription: String, toNextScreen: (Str
 fun IconButtonSample_4F(fileid: Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
     IconButton(
         onClick = { toNextScreen("4F")  },
-        modifier = Modifier.size(120.dp)
+        modifier = Modifier
+            .size(120.dp)
     ) {
         Image(
             painter = painterResource(fileid),
@@ -72,7 +74,8 @@ fun IconButtonSample_4F(fileid: Int, filedescription: String, toNextScreen: (Str
 fun IconButtonSample_5F(fileid: Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
     IconButton(
         onClick = { toNextScreen("5F")  },
-        modifier = Modifier.size(120.dp)
+        modifier = Modifier
+            .size(120.dp)
     ) {
         Image(
             painter = painterResource(fileid),
@@ -86,8 +89,8 @@ fun IconButtonSample_R1F(fileid: Int, filedescription: String, toNextScreen: (St
     IconButton(
         onClick = { toNextScreen("R1F")  },
         modifier = Modifier
-            .width(100.dp)
-            .height(65.dp)
+            .width(47.dp)
+            .height(160.dp)
     ) {
         Image(
             painter = painterResource(fileid),
@@ -101,8 +104,8 @@ fun IconButtonSample_R2F(fileid: Int, filedescription: String, toNextScreen: (St
     IconButton(
         onClick = { toNextScreen("R2F")  },
         modifier = Modifier
-            .width(105.dp)
-            .height(140.dp)
+            .width(65.dp)
+            .height(100.dp)
     ) {
         Image(
             painter = painterResource(fileid),
