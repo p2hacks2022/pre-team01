@@ -22,7 +22,7 @@ fun MainScreen(toNextScreen: (String) -> Unit = {}) {
             painter = painterResource(R.drawable.logo_ver1),
             contentDescription = "logo",
             modifier = Modifier
-                .width(220.dp)
+                .width(260.dp)
                 .height(100.dp)
         )
     }
@@ -106,21 +106,31 @@ fun Screen5F(toNextScreen: (String)->Unit = {}) {
                 .fillMaxSize(),
             verticalAlignment = Alignment.Bottom ,
         ) {
-            Button(onClick = { toNextScreen("toilet1") },
-                Modifier.padding(10.dp)) {
-                Text(text = "Toilet1")
-            }
-            Button(onClick = { toNextScreen("toilet2") },
-                Modifier.padding(10.dp)) {
-                Text(text = "Toilet2")
-            }
-            Button(onClick = { toNextScreen("toilet3") },
-                Modifier.padding(10.dp)) {
-                Text(text = "Toilet3")
-            }
-            Button(onClick = { toNextScreen("main") },
-                Modifier.padding(10.dp)) {
-                Text(text = "Back")
+            Column() {
+                Button(
+                    onClick = { toNextScreen("toilet1") },
+                    Modifier.padding(10.dp)
+                ) {
+                    Text(text = "Toilet1")
+                }
+                Button(
+                    onClick = { toNextScreen("toilet2") },
+                    Modifier.padding(10.dp)
+                ) {
+                    Text(text = "Toilet2")
+                }
+                Button(
+                    onClick = { toNextScreen("toilet3") },
+                    Modifier.padding(10.dp)
+                ) {
+                    Text(text = "Toilet3")
+                }
+                Button(
+                    onClick = { toNextScreen("main") },
+                    Modifier.padding(10.dp)
+                ) {
+                    Text(text = "Back")
+                }
             }
 
         }
