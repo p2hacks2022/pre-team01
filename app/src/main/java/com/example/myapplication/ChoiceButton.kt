@@ -26,6 +26,5 @@ fun IconButtonToilet(name: String,fileid: Int, filedescription: String, toNextSc
             contentDescription = filedescription
          )
             Text(text = name)}
-
     }
 }
