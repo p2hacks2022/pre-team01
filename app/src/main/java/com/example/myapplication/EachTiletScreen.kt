@@ -183,33 +183,6 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
         ScrollBoxes2()
     }
 
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Bottom
-    ) {
-        Button(onClick = { toNextScreen() }) {
-            Text(text = "Back")
-        }
-    }
 }
 
 
-@Composable
-fun ScreenToilet2(toNextScreen: () -> Unit = {}) {
-    Column {
-        Text(text = "Toilet2")
-        Button(onClick = { toNextScreen() }) {
-            Text(text = "Back")
-        }
-    }
-}
-
-@Composable
-fun ScreenToilet3(toNextScreen: () -> Unit = {}) {
-    Column {
-        Text(text = "Toilet3")
-        Button(onClick = { toNextScreen() }) {
-            Text(text = "Back")
-        }
-    }
-}

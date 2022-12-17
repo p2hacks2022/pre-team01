@@ -30,9 +30,9 @@ val iconsize = 45
 val photosize = 140
 val space = 20
 
-@Preview
 @Composable
-fun ScreenRank(toNextScreen: () -> Unit = {}) {
+fun ScreenRank(toNextScreen: (String) -> Unit = {}) {
+
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Top
@@ -62,16 +62,8 @@ fun ScreenRank(toNextScreen: () -> Unit = {}) {
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
 
-            Rank(R.drawable.gold_crown, name = "5階トイレ", R.drawable.crown, "5F", 3.0)
-            Rank(R.drawable.gold_crown, name = "5階トイレ", R.drawable.crown, "5F", 3.0)
-        }
-        Row(
-            modifier = Modifier.size(410.dp, (iconsize + photosize + space).dp),
-            horizontalArrangement = Arrangement.SpaceEvenly
-        ) {
-
-            Rank(R.drawable.silver_crown, name = "5階トイレ", R.drawable.crown, "5F", 2.8)
-            Rank(R.drawable.silver_crown, name = "5階トイレ", R.drawable.crown, "5F", 2.8)
+            Rank(R.drawable.gold_crown, name = "5階トイレ", R.drawable.crown, R.drawable.crown,R.drawable.crown,"5F", 3.0){toNextScreen("toilet1")}
+            Rank(R.drawable.gold_crown, name = "5階トイレ", R.drawable.crown, R.drawable.crown,R.drawable.crown,"5F", 3.0)
 
         }
         Row(
@@ -79,8 +71,17 @@ fun ScreenRank(toNextScreen: () -> Unit = {}) {
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
 
-            Rank(R.drawable.bronze_crown, name = "5階トイレ", R.drawable.crown, "5F", 2.4)
-            Rank(R.drawable.bronze_crown, name = "5階トイレ", R.drawable.crown, "5F", 2.4)
+            Rank(R.drawable.silver_crown, name = "5階トイレ", R.drawable.crown, R.drawable.crown,R.drawable.crown,"5F", 2.8)
+            Rank(R.drawable.silver_crown, name = "5階トイレ", R.drawable.crown, R.drawable.crown,R.drawable.crown,"5F", 2.8)
+
+        }
+        Row(
+            modifier = Modifier.size(410.dp, (iconsize + photosize + space).dp),
+            horizontalArrangement = Arrangement.SpaceEvenly
+        ) {
+
+            Rank(R.drawable.bronze_crown, name = "5階トイレ", R.drawable.crown,R.drawable.crown,R.drawable.crown, "5F", 2.4)
+            Rank(R.drawable.bronze_crown, name = "5階トイレ", R.drawable.crown,R.drawable.crown,R.drawable.crown, "5F", 2.4)
 
         }
 
@@ -88,78 +89,73 @@ fun ScreenRank(toNextScreen: () -> Unit = {}) {
 }
 
 @Composable
-fun Rank(crownid: Int, name: String, fileid: Int, filedescription: String, rank: Double) {
-    Column() {
+fun Rank(crownid:Int, name: String, fileid1:Int,fileid2:Int,fileid3:Int, filedescription: String,  rank: Double, toNextScreen: (String) -> Unit = {}) {
+    Column{
         Row {
 
-            Image(
-                painter = painterResource(crownid),
-                contentDescription = null,
-                modifier = Modifier
-                    .size(iconsize.dp)
-            )
-            Column() {
-                Text(
-                    text = " $name",
-                    fontSize = textsize.sp
+                    Image(
+                        painter = painterResource(crownid),
+                        contentDescription = null,
+                        modifier = Modifier
+                            .size(iconsize.dp)
+                    )
+                    Column() {
+                        Text(
+                            text = " $name",
+                            fontSize = textsize.sp
+                        )
+                        RankIcon(rank)
+                    }
+                }
+
+                RankingButton(fileid1, fileid2, fileid3, filedescription) {
+                    toNextScreen("toilet1")
+                }
+
+        }
+
+    }
+
+
+        @Composable
+        fun Mantoilet() {
+            Row {
+                Image(
+                    painter = painterResource(R.drawable.man),
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(iconsize.dp)
                 )
-                RankIcon(rank)
+                Text(
+                    text = "男子トイレ",
+                    modifier = Modifier
+                        .padding(
+                            top = 7.dp
+                        ),
+                    fontSize = subtitlesize.sp
+                )
             }
         }
-        ScrollBoxes3(fileid1,fileid2,fileid3,filedescription)
-        /*
-        Image(
-            painter = painterResource(fileid),
-            contentDescription = filedescription,
-            modifier = Modifier
-                .size(photosize.dp)
-        )
-        */
-    }
 
-}
-
-
-@Composable
-fun Mantoilet() {
-    Row {
-        Image(
-            painter = painterResource(R.drawable.man),
-            contentDescription = null,
-            modifier = Modifier
-                .size(iconsize.dp)
-        )
-        Text(
-            text = "男子トイレ",
-            modifier = Modifier
-                .padding(
-                    top = 7.dp
-                ),
-            fontSize = subtitlesize.sp
-        )
-    }
-}
-
-@Composable
-fun Womantoilet() {
-    Row {
-        Image(
-            painter = painterResource(R.drawable.woman),
-            contentDescription = null,
-            modifier = Modifier
-                .size(iconsize.dp)
-        )
-        Text(
-            text = "女子トイレ",
-            modifier = Modifier
-            .padding(
-                top = 7.dp
-                ),
-            fontSize = subtitlesize.sp
-        )
-    }
-}
-
+        @Composable
+        fun Womantoilet() {
+            Row {
+                Image(
+                    painter = painterResource(R.drawable.woman),
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(iconsize.dp)
+                )
+                Text(
+                    text = "女子トイレ",
+                    modifier = Modifier
+                        .padding(
+                            top = 7.dp
+                        ),
+                    fontSize = subtitlesize.sp
+                )
+            }
+        }
 
 
 
