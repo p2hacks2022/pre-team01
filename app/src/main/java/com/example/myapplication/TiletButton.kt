@@ -37,20 +37,6 @@ fun Input(){
     }
 }
 
-@Composable
-fun Yoyaku(){
-    var showText by remember{mutableStateOf(true)}
-    Column{
-        Button(onClick={
-            showText=!showText
-        }){Text(text="予約")}
-        if(!showText){
-            Text(text="予約されました")
-        }
-
-    }
-}
-
 @Preview(showBackground = true)
 @Composable
 fun IconToggleButtonSample() {

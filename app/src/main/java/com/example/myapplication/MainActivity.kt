@@ -61,7 +61,8 @@ class MainActivity : ComponentActivity() {
                     }
                 }
                 composable(route = "rank",) {
-                    ScreenRank { screenName ->                            navController.navigate(screenName)
+                    ScreenRank { screenName ->
+                        navController.navigate(screenName)
                     }
                 }
             }
