@@ -54,8 +54,8 @@ fun ScreenRank(toNextScreen: (String) -> Unit = {}) {
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
 
-            Rank(R.drawable.gold_crown, name = "5階トイレ", R.drawable.toilet5f_1_shou, R.drawable.toilet5f_1_dai,R.drawable.toilet5f_1,"5F", 2.9){toNextScreen("toilet1")}
-            Rank(R.drawable.gold_crown, name = "5階トイレ", R.drawable.toilet5f_1, R.drawable.noimage,R.drawable.noimage,"5F", 3.0)
+            Rank(R.drawable.gold_crown, name = "5F講堂前トイレ", R.drawable.toilet5f_1_shou, R.drawable.toilet5f_1_dai,R.drawable.toilet5f_1,"5F", 2.9){toNextScreen("toilet1")}
+            Rank(R.drawable.gold_crown, name = "5F講堂前トイレ", R.drawable.toilet5f_1, R.drawable.noimage,R.drawable.noimage,"5F", 3.0)
 
         }
         Row(
@@ -63,8 +63,8 @@ fun ScreenRank(toNextScreen: (String) -> Unit = {}) {
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
 
-            Rank(R.drawable.silver_crown, name = "5階トイレ", R.drawable.toilet5f_2_door, R.drawable.toilet5f_2_dai,R.drawable.toilet5f_2_shou,"5F", 2.8)
-            Rank(R.drawable.silver_crown, name = "5階トイレ", R.drawable.noimage, R.drawable.noimage,R.drawable.noimage,"5F", 2.8)
+            Rank(R.drawable.silver_crown, name = "5F東トイレ　　", R.drawable.toilet5f_2_door, R.drawable.toilet5f_2_dai,R.drawable.toilet5f_2_shou,"5F", 2.8)
+            Rank(R.drawable.silver_crown, name = "5F東トイレ　　", R.drawable.noimage, R.drawable.noimage,R.drawable.noimage,"5F", 2.5)
 
         }
         Row(
@@ -72,8 +72,8 @@ fun ScreenRank(toNextScreen: (String) -> Unit = {}) {
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
 
-            Rank(R.drawable.bronze_crown, name = "5階トイレ", R.drawable.toilet5f_3_door,R.drawable.toilet5f_3_dai,R.drawable.toilet5f_3_shou, "5F", 1.7)
-            Rank(R.drawable.bronze_crown, name = "5階トイレ", R.drawable.toilet5f_3_door_w,R.drawable.noimage,R.drawable.noimage, "5F", 2.4)
+            Rank(R.drawable.bronze_crown, name = "5F西トイレ　　", R.drawable.toilet5f_3_door,R.drawable.toilet5f_3_dai,R.drawable.toilet5f_3_shou, "5F", 1.7)
+            Rank(R.drawable.bronze_crown, name = "5F西トイレ　　", R.drawable.toilet5f_3_door_w,R.drawable.noimage,R.drawable.noimage, "5F", 2.4)
 
         }
 

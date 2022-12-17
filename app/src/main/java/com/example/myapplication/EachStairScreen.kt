@@ -38,7 +38,9 @@ fun MainScreen(toNextScreen: (String) -> Unit = {}) {
         horizontalArrangement = Arrangement.SpaceEvenly,
     ) {
         Column(
-            modifier = Modifier.fillMaxHeight(),
+            modifier = Modifier
+                .fillMaxHeight()
+                .padding(bottom = 20.dp),
             verticalArrangement = Arrangement.Bottom
         ) {
             IconButtonSample_5F(R.drawable.fun_5floar, "5F", 120) { toNextScreen("5F") }

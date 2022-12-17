@@ -54,7 +54,7 @@ fun ScrollBoxes2() {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .fillMaxHeight(0.7f)
+            .fillMaxHeight(0.96f)
             .verticalScroll(rememberScrollState())
             .background(Color.Gray)
             .padding(15.dp, 0.dp),
@@ -72,6 +72,25 @@ fun ScrollBoxes2() {
             RankIcon(rank = 3.0)
             Text(
                 text = "　気もちよし！",
+                fontSize = 22.sp,
+                color = Color.White,
+                modifier = Modifier.clickable {
+                    // 項目が押された時の処理
+                }
+            )
+        }
+
+        Row(
+            horizontalArrangement =  Arrangement.Center,
+        ){
+            Icon(
+                Icons.Filled.Person, contentDescription = "人",
+                tint = tint3.value
+            )
+
+            RankIcon(rank = 0.0)
+            Text(
+                text = "　女子トイレに間違って行っちゃいました",
                 fontSize = 22.sp,
                 color = Color.White,
                 modifier = Modifier.clickable {
@@ -110,25 +129,6 @@ fun ScrollBoxes2() {
             RankIcon(rank = 2.0)
             Text(
                 text = "　ウォシュレット！",
-                fontSize = 22.sp,
-                color = Color.White,
-                modifier = Modifier.clickable {
-                    // 項目が押された時の処理
-                }
-            )
-        }
-
-        Row(
-            horizontalArrangement =  Arrangement.Center,
-        ){
-            Icon(
-                Icons.Filled.Person, contentDescription = "人",
-                tint = tint3.value
-            )
-
-            RankIcon(rank = 0.0)
-            Text(
-                text = "　女子トイレに間違って行っちゃいました",
                 fontSize = 22.sp,
                 color = Color.White,
                 modifier = Modifier.clickable {
