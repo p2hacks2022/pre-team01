@@ -44,8 +44,8 @@ fun MainScreen(toNextScreen: (String) -> Unit = {}) {
             IconButtonSample_1F(R.drawable.fun_1floar, "1F") { toNextScreen("1F") }
         }
         Column() {
-            IconButtonSample_R1F(R.drawable.fun_research1_text, "R1F") { toNextScreen("R1F") }
-            IconButtonSample_R2F(R.drawable.fun_reserch2_text, "R2F") { toNextScreen("R2F") }
+            IconButtonSample_R1F(R.drawable.fun_research1floar, "R1F") { toNextScreen("R1F") }
+            IconButtonSample_R2F(R.drawable.fun_research2floar, "R2F") { toNextScreen("R2F") }
         }
     }
     Column(
