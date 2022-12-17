@@ -94,28 +94,7 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
             Text(text = "空き状況")
         }
 
-        var toiletSize = 65
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-        ) {
-            IconButtonSample_5F(R.drawable.large_urinal, "l_icon", toiletSize) {}
-            IconButtonSample_5F(R.drawable.large_urinal_no1, "l_button", toiletSize) {}
-            IconButtonSample_5F(R.drawable.large_urinal_no2, "l_button", toiletSize) {}
-            IconButtonSample_5F(R.drawable.large_urinal_no3, "l_button", toiletSize) {}
-        }
-
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-        ) {
-            IconButtonSample_5F(R.drawable.urinal, "s_icon", toiletSize) {}
-            IconButtonSample_5F(R.drawable.urinal_no1, "s_button", toiletSize) {}
-            IconButtonSample_5F(R.drawable.urinal_no2, "s_button", toiletSize) {}
-            IconButtonSample_5F(R.drawable.urinal_no3, "s_button", toiletSize) {}
-            IconButtonSample_5F(R.drawable.urinal_no4, "s_button", toiletSize) {}
-            IconButtonSample_5F(R.drawable.urinal_no5, "s_button", toiletSize) {}
-        }
+        YoyakuButtons()
 
         Row(
             modifier = Modifier
@@ -131,11 +110,7 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                 .padding(top = 15.dp),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            Column() {
-                Button(onClick = {}) {
-                    Text(text = "予約")
-                }
-            }
+            
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
