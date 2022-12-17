@@ -62,19 +62,7 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                     horizontalArrangement = Arrangement.Center
                 ) {
                     // レビュー評価
-                    Icon(
-                        Icons.Filled.Star, contentDescription = "お気に入り",
-                        tint = tint1.value
-                    )
-                    Icon(
-                        Icons.Filled.Star, contentDescription = "お気に入り",
-                        tint = tint1.value
-                    )
-                    Icon(
-                        Icons.Filled.Star, contentDescription = "お気に入り",
-                        tint = tint2.value
-                    )
-                    Text(text = " 2.0")
+                    RankIcon(rank = 2.9)
                 }
 
                 Row(
@@ -122,9 +110,7 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                 .padding(top = 15.dp),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            Column() {
-                //Yoyaku()
-            }
+            
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
