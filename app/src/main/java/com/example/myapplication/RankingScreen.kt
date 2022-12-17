@@ -1,30 +1,18 @@
 package com.example.myapplication
 
-import android.graphics.fonts.FontFamily
+
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Row
 import androidx.compose.ui.res.painterResource
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
-import androidx.compose.foundation.border
 import androidx.compose.material.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.sp
 
 val titlesize = 120
@@ -34,7 +22,6 @@ val iconsize =30
 val photosize =140
 val space = 25
 
-@Preview
 @Composable
 fun ScreenRank(toNextScreen: () -> Unit = {}) {
     Column (
@@ -155,6 +142,7 @@ fun Womantoilet() {
         )
     }
 }
+
 
 
 
