@@ -30,32 +30,42 @@ fun MainScreen(toNextScreen: (String) -> Unit = {}) {
             contentDescription = "logo",
             modifier = Modifier
                 .width(300.dp)
-                .height(88.dp)
+                .height(120.dp)
         )
     }
     Row(
         modifier = Modifier.fillMaxSize(),
         horizontalArrangement = Arrangement.SpaceEvenly,
-        verticalAlignment = Alignment.CenterVertically
     ) {
-        Column() {
+        Column(
+            modifier = Modifier
+                .fillMaxHeight()
+                .padding(bottom = 20.dp),
+            verticalArrangement = Arrangement.Bottom
+        ) {
             IconButtonSample_5F(R.drawable.fun_5floar, "5F", 120) { toNextScreen("5F") }
             IconButtonSample_4F(R.drawable.fun_4floar, "4F") { toNextScreen("4F") }
             IconButtonSample_3F(R.drawable.fun_3floar, "3F") { toNextScreen("3F") }
             IconButtonSample_2F(R.drawable.fun_2floar, "2F") { toNextScreen("2F") }
             IconButtonSample_1F(R.drawable.fun_1floar, "1F") { toNextScreen("1F") }
         }
-        Column() {
+        Column(
+            modifier = Modifier
+                .fillMaxHeight()
+                .padding(top = 160.dp),
+            verticalArrangement = Arrangement.Center
+        ) {
             IconButtonSample_R1F(R.drawable.fun_research1floar, "R1F") { toNextScreen("R1F") }
             IconButtonSample_R2F(R.drawable.fun_research2floar, "R2F") { toNextScreen("R2F") }
         }
     }
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize(),
         verticalArrangement = Arrangement.Bottom,
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.End
     ) {
-        IconButtonSample_rank(R.drawable.toileranking, "rank") { toNextScreen("rank") }
+        IconButtonSample_rank(R.drawable.toileranking_ver2, "rank") { toNextScreen("rank") }
     }
 }
 
@@ -146,7 +156,7 @@ fun Screen5F(toNextScreen: (String) -> Unit = {}) {
                 gender = "Woman",
                 fontSize = fontSize,
                 file = R.drawable.woman
-            ){ toNextScreen("toilet2")}
+            ) { toNextScreen("toilet2") }
             IconButtonGender(
                 number = "①",
                 gender = "Accessible",

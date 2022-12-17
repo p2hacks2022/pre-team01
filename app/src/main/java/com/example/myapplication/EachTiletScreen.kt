@@ -19,6 +19,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.myapplication.ui.theme.IconButtonSample_5F
 import com.example.myapplication.ui.theme.ScrollBoxes3
 import kotlinx.coroutines.NonCancellable.children
@@ -36,24 +37,24 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
 
     Column(
         modifier = Modifier
-            .fillMaxSize(),
+            .fillMaxSize()
+            .padding(top = 5.dp),
     ) {
-        Text(text = "Toilet1")
-
         Row(
             modifier = Modifier
-                .fillMaxWidth(),
+                .fillMaxWidth()
+                .padding(start = 5.dp),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
             // トイレ画像
             ScrollBoxes3(
                 id = R.drawable.toilet5f_1, id2 = R.drawable.toilet5f_1_dai,
-                id3 = R.drawable.toilet5f_1_shou, filedescription = "toilet image", 100
+                id3 = R.drawable.toilet5f_1_shou, filedescription = "toilet image", 170
             )
 
             Column(
                 modifier = Modifier
-                    .size(250.dp, 100.dp),
+                    .size(250.dp, 140.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Row(
@@ -61,27 +62,42 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                         .fillMaxWidth(),
                     horizontalArrangement = Arrangement.Center
                 ) {
-                    // レビュー評価
-                    RankIcon(rank = 2.9)
+                    // タイトル
+                    Text(text = "5F講堂前トイレ", fontSize = 20.sp)
                 }
 
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(top = 5.dp),
-                    horizontalArrangement = Arrangement.Center
+                        .padding(start = 5.dp, top = 15.dp),
+                    //horizontalArrangement = Arrangement.Center
                 ) {
                     // 備考
-                    Text(text = "備考")
+                    Text(text = "※備考")
                 }
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(top = 5.dp),
-                    horizontalArrangement = Arrangement.Center
+                        .padding(top = 5.dp, start = 15.dp, end = 5.dp),
                 ) {
                     // 備考
-                    Text(text = "女子トイレと男子トイレを間違えやすい")
+                    Text(text = "・女子トイレと男子トイレを間")
+                }
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 5.dp, start = 30.dp, end = 5.dp),
+                ) {
+                    // 備考
+                    Text(text = "違えやすい")
+                }
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 5.dp, start = 15.dp, end = 5.dp),
+                ) {
+                    // 備考
+                    Text(text = "・利用者が多い")
                 }
             }
         }
@@ -89,7 +105,15 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 15.dp)
+                .padding(start = 40.dp)
+        ) {
+            RankIcon(rank = 2.9)
+        }
+
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 10.dp, top = 15.dp)
         ) {
             Text(text = "空き状況")
         }
@@ -110,11 +134,11 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                 .padding(top = 15.dp),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            
+
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(text = "--ペーパー状況--")
+                Text(text = "--ペーパー状況--", fontSize = 23.sp)
                 Row(
                     modifier = Modifier
                         .padding(top = 5.dp)
@@ -122,32 +146,32 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                     Image(
                         painter = painterResource(R.drawable.toiletpaper),
                         contentDescription = "toiletpaper",
-                        modifier = Modifier.size(20.dp)
+                        modifier = Modifier.size(28.dp)
                     )
                     Image(
                         painter = painterResource(R.drawable.toiletpaper),
                         contentDescription = "toiletpaper",
-                        modifier = Modifier.size(20.dp)
+                        modifier = Modifier.size(28.dp)
                     )
                     Image(
                         painter = painterResource(R.drawable.toiletpaper_batu),
                         contentDescription = "toiletpaper_batu",
-                        modifier = Modifier.size(20.dp)
+                        modifier = Modifier.size(28.dp)
                     )
                 }
             }
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(text = "--清掃状況--")
-                Text(text = "２時間前")
+                Text(text = "--清掃状況--", fontSize = 23.sp)
+                Text(text = "２時間前", fontSize = 23.sp, color = Color.Red)
             }
         }
 
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 15.dp)
+                .padding(start = 10.dp, top = 15.dp)
         ) {
             Text(text = "レビュー")
         }
@@ -155,36 +179,48 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
+                .padding(start = 10.dp)
         ) {
-            IconToggleButtonSample()
-            IconToggleButtonSample()
-            IconToggleButtonSample()
+            Row(
+                modifier = Modifier
+                    .padding(top = 13.dp)
+            ) {
+                Text(text = "※星をタップしてください")
+            }
+            Row(
+                modifier = Modifier
+                    .padding(start = 10.dp)
+            ) {
+                IconToggleButtonSample()
+                IconToggleButtonSample()
+                IconToggleButtonSample()
+            }
         }
 
         Row(
             modifier = Modifier
                 .fillMaxWidth()
+                .padding(start = 5.dp)
         ) {
-            Text(text = "星をタップしてください")
+            Input()
         }
+
 
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-        ) {
-            Text(text = "レビューを投稿できます")
-        }
-
-        Input()
-
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
+                .padding(start = 10.dp, top = 5.dp)
         ) {
             Text(text = "みんなのレビュー")
         }
 
-        ScrollBoxes2()
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 5.dp, end = 5.dp)
+        ) {
+            ScrollBoxes2()
+        }
     }
 }
 

@@ -3,6 +3,7 @@ package com.example.myapplication
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
@@ -26,12 +27,14 @@ fun Input(){
             value = input,
             onValueChange={input=it}
         )
-        Button(onClick={
-            input=""
-            showText=!showText
-        }){Text(text="Send")}
-        if(!showText){
-            Text(text="レビューが投稿されました")
+        Row() {
+            Button(onClick = {
+                input = ""
+                showText = !showText
+            }) { Text(text = "Send") }
+            if (!showText) {
+                Text(text = "レビューが投稿されました")
+            }
         }
 
     }

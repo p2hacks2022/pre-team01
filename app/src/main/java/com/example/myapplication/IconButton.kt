@@ -122,8 +122,8 @@ fun IconButtonSample_rank(fileid: Int, filedescription: String, toNextScreen: (S
     Box(
         contentAlignment = Alignment.Center,
         modifier = Modifier
-            .width(220.dp)
-            .height(80.dp)
+            .width(150.dp)
+            .height(70.dp)
             .clip(RoundedCornerShape(10.dp))
             .background(Color(0x00000000))
             .border(width = 2.dp, color = Color.DarkGray, shape = RoundedCornerShape(10.dp))
