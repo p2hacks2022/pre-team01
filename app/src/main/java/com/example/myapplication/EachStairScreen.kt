@@ -125,7 +125,9 @@ fun Screen5F(toNextScreen: (String) -> Unit = {}) {
                 .fillMaxWidth(),
             //horizontalArrangement = Arrangement.SpaceEvenly
         ) {
+
             IconButtonGender(number = "①", gender = "Man", fontSize = fontSize, file = R.drawable.man){ toNextScreen("toilet1") }
+
             IconButtonGender(number = "①", gender = "Woman", fontSize = fontSize, file = R.drawable.woman)
             IconButtonGender(number = "①", gender = "Accessible", fontSize = fontSize, file = R.drawable.wheelchair_man)
         }
