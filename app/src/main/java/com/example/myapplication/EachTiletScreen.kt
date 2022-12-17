@@ -44,8 +44,8 @@ fun ScreenManToilet1(toNextScreen: ()->Unit = {}) {
         Text(text = "総合レビュー")
         Row(horizontalArrangement =  Arrangement.Center){
             Icon(
-            Icons.Filled.Star, contentDescription = "お気に入り",
-            tint = tint1.value
+                Icons.Filled.Star, contentDescription = "お気に入り",
+                tint = tint1.value
             )
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
