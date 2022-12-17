@@ -13,7 +13,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.ui.unit.dp
 import androidx.compose.material.*
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
+import com.example.myapplication.ui.theme.ScrollBoxes3
 
 val titlesize = 120
 val subtitlesize = 25
@@ -22,6 +24,7 @@ val iconsize =30
 val photosize =140
 val space = 25
 
+@Preview
 @Composable
 fun ScreenRank(toNextScreen: () -> Unit = {}) {
     Column (
@@ -52,22 +55,22 @@ fun ScreenRank(toNextScreen: () -> Unit = {}) {
             modifier = Modifier.size(410.dp,(textsize + photosize + space).dp),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            Rank(R.drawable.gold_crown, name = "5階トイレ", R.drawable.crown, "5F")
-            Rank(R.drawable.gold_crown, name = "5階トイレ", R.drawable.crown, "5F")
+            Rank(R.drawable.gold_crown, name = "5階トイレ", R.drawable.crown, R.drawable.crown,R.drawable.crown,"5F")
+            Rank(R.drawable.gold_crown, name = "5階トイレ", R.drawable.crown, R.drawable.crown,R.drawable.crown,"5F")
         }
         Row(
             modifier = Modifier.size(410.dp,(textsize + photosize + space).dp),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            Rank(R.drawable.silver_crown, name = "5階トイレ", R.drawable.crown, "5F")
-            Rank(R.drawable.silver_crown, name = "5階トイレ", R.drawable.crown, "5F")
+            Rank(R.drawable.silver_crown, name = "5階トイレ", R.drawable.crown, R.drawable.crown,R.drawable.crown,"5F")
+            Rank(R.drawable.silver_crown, name = "5階トイレ", R.drawable.crown, R.drawable.crown,R.drawable.crown,"5F")
         }
         Row(
             modifier = Modifier.size(410.dp,(textsize + photosize + space).dp),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            Rank(R.drawable.bronze_crown, name = "5階トイレ", R.drawable.crown, "5F")
-            Rank(R.drawable.bronze_crown, name = "5階トイレ", R.drawable.crown, "5F")
+            Rank(R.drawable.bronze_crown, name = "5階トイレ", R.drawable.crown, R.drawable.crown,R.drawable.crown,"5F")
+            Rank(R.drawable.bronze_crown, name = "5階トイレ", R.drawable.crown, R.drawable.crown,R.drawable.crown,"5F")
         }
 
     }
@@ -83,7 +86,7 @@ fun ScreenRank(toNextScreen: () -> Unit = {}) {
 }
 
 @Composable
-fun Rank(crownid: Int, name: String, fileid: Int, filedescription: String) {
+fun Rank(crownid:Int, name: String, fileid1:Int,fileid2:Int,fileid3:Int, filedescription: String) {
     Column(){
         Row{
             Image(
@@ -102,12 +105,15 @@ fun Rank(crownid: Int, name: String, fileid: Int, filedescription: String) {
                 )
             }
         }
+        ScrollBoxes3(fileid1,fileid2,fileid3,filedescription)
+        /*
         Image(
             painter = painterResource(fileid),
             contentDescription = filedescription,
             modifier = Modifier
                 .size(photosize.dp)
         )
+        */
     }
 }
 

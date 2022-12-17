@@ -23,6 +23,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.myapplication.ui.theme.IconButtonSample_5F
+import com.example.myapplication.ui.theme.ScrollBoxes3
 import kotlinx.coroutines.NonCancellable.children
 
 @Composable
@@ -36,10 +37,8 @@ fun ScreenManToilet1(toNextScreen: ()->Unit = {}) {
 
     Column {
         Text(text = "Toilet1")
-        Image(
-            painter = painterResource(R.drawable.a),
-            contentDescription = "toilet image",
-        )
+
+        ScrollBoxes3(id = R.drawable.a, id2 = R.drawable.a, id3 = R.drawable.a, filedescription = "toilet image")
 
         Text(text = "総合レビュー")
         Row(horizontalArrangement =  Arrangement.Center){
