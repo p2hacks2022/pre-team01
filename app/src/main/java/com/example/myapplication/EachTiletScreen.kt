@@ -127,9 +127,7 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
             horizontalArrangement = Arrangement.SpaceEvenly
         ){
             Column (){
-                Button(onClick = {}) {
-                    Text(text = "予約")
-                }
+                Yoyaku()
             }
             Column() {
                 Text(text = "ペーパー状況")
