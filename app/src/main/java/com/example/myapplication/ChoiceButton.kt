@@ -42,7 +42,11 @@ fun IconButtonGender(number: String, gender: String, fontSize: Int, file: Int, t
         Box(
             contentAlignment = Alignment.Center
         ){
-            IconButtonToilet("toilet1", file, "toile")
+
+            IconButtonToilet("toilet1", file, "toile"){
+                toNextScreen("toilet1")
+            }
+
             Text(text = gender, fontSize = fontSize.sp)
         }
 
