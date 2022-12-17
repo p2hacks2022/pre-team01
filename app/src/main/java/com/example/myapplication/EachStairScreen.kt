@@ -109,6 +109,7 @@ fun Screen5F(toNextScreen: (String) -> Unit = {}) {
         Text(text = "5F")
         ZoomImageSample()
 
+
         Row(
             modifier = Modifier
                 .padding(top = 145.dp)
