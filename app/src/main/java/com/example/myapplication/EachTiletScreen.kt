@@ -138,7 +138,7 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(text = "--ペーパー状況--")
+                Text(text = "--ペーパー状況--", fontSize = 23.sp)
                 Row(
                     modifier = Modifier
                         .padding(top = 5.dp)
@@ -146,25 +146,25 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                     Image(
                         painter = painterResource(R.drawable.toiletpaper),
                         contentDescription = "toiletpaper",
-                        modifier = Modifier.size(20.dp)
+                        modifier = Modifier.size(28.dp)
                     )
                     Image(
                         painter = painterResource(R.drawable.toiletpaper),
                         contentDescription = "toiletpaper",
-                        modifier = Modifier.size(20.dp)
+                        modifier = Modifier.size(28.dp)
                     )
                     Image(
                         painter = painterResource(R.drawable.toiletpaper_batu),
                         contentDescription = "toiletpaper_batu",
-                        modifier = Modifier.size(20.dp)
+                        modifier = Modifier.size(28.dp)
                     )
                 }
             }
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(text = "--清掃状況--")
-                Text(text = "２時間前")
+                Text(text = "--清掃状況--", fontSize = 23.sp)
+                Text(text = "２時間前", fontSize = 23.sp, color = Color.Red)
             }
         }
 
