@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import IconButtonToilet
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
@@ -93,23 +94,37 @@ fun Screen5F(toNextScreen: (String)->Unit = {}) {
     ){
         Text(text = "5F")
         ZoomImageSample()
+        Box(){
+            IconButtonToilet("toilet1",R.drawable.a,"toile" )
+            Text(text = "toile1")
+        }
+        Box(){
+            IconButtonToilet("toilet1",R.drawable.a,"toile" )
+        }
+        Box(){
+            IconButtonToilet("toilet1",R.drawable.a,"toile" )
+        }
+        Box(){
+            IconButtonToilet("toilet1",R.drawable.a,"toile" )
+        }
+        Box(){
+            IconButtonToilet("toilet1",R.drawable.a,"toile" )
+        }
+        Box(){
+            IconButtonToilet("toilet1",R.drawable.a,"toile" )
+        }
+        Box(){
+            IconButtonToilet("toilet1",R.drawable.a,"toile" )
+        }
+        Box(){
+            IconButtonToilet("toilet1",R.drawable.a,"toile" )
+        }
+        
         Row(
             Modifier
                 .fillMaxSize(),
             verticalAlignment = Alignment.Bottom ,
         ) {
-            Button(onClick = { toNextScreen("toilet1") },
-                Modifier.padding(10.dp)) {
-                Text(text = "Toilet1")
-            }
-            Button(onClick = { toNextScreen("toilet2") },
-                Modifier.padding(10.dp)) {
-                Text(text = "Toilet2")
-            }
-            Button(onClick = { toNextScreen("toilet3") },
-                Modifier.padding(10.dp)) {
-                Text(text = "Toilet3")
-            }
             Button(onClick = { toNextScreen("main") },
                 Modifier.padding(10.dp)) {
                 Text(text = "Back")

@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material.Button
@@ -10,6 +11,7 @@ import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 
@@ -30,7 +32,7 @@ fun ScreenManToilet1(toNextScreen: ()->Unit = {}) {
         )
 
         Text(text = "総合レビュー")
-        Row(){
+        Row(horizontalArrangement =  Arrangement.Center){
             Icon(
             Icons.Filled.Star, contentDescription = "お気に入り",
             tint = tint1.value
@@ -43,6 +45,7 @@ fun ScreenManToilet1(toNextScreen: ()->Unit = {}) {
                 Icons.Filled.Star, contentDescription = "お気に入り",
                 tint = tint2.value
             )
+            Text(text = " 2.0")
         }
 
         Text(text = "備考")
