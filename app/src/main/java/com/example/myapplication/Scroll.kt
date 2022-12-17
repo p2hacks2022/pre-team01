@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.myapplication.RankIcon
 
 @Composable
 fun ScrollBoxes() {
@@ -23,7 +24,7 @@ fun ScrollBoxes() {
             .fillMaxHeight(0.3f)
             .verticalScroll(rememberScrollState())
             .background(Color.Blue)
-            .padding(15.dp,0.dp),
+            .padding(15.dp, 0.dp),
 
         ) {
         repeat(30) {
@@ -56,7 +57,7 @@ fun ScrollBoxes2() {
             .fillMaxHeight(0.7f)
             .verticalScroll(rememberScrollState())
             .background(Color.Gray)
-            .padding(15.dp,0.dp),
+            .padding(15.dp, 0.dp),
 
         ) {
 
@@ -68,19 +69,7 @@ fun ScrollBoxes2() {
                 tint = tint3.value
             )
 
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint1.value
-            )
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint1.value
-            )
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint1.value
-            )
-            Text(text = " 3.0")
+            RankIcon(rank = 3.0)
             Text(
                 text = "　気もちよし！",
                 fontSize = 22.sp,
@@ -99,21 +88,9 @@ fun ScrollBoxes2() {
                 tint = tint3.value
             )
 
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint1.value
-            )
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint1.value
-            )
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint1.value
-            )
-            Text(text = " 3.0")
+            RankIcon(rank = 3.0)
             Text(
-                text = "　  素晴らしい",
+                text = "　素晴らしい",
                 fontSize = 22.sp,
                 color = Color.White,
                 modifier = Modifier.clickable {
@@ -130,19 +107,7 @@ fun ScrollBoxes2() {
                 tint = tint3.value
             )
 
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint1.value
-            )
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint1.value
-            )
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint2.value
-            )
-            Text(text = " 2.0")
+            RankIcon(rank = 2.0)
             Text(
                 text = "　ウォシュレット！",
                 fontSize = 22.sp,
@@ -161,19 +126,7 @@ fun ScrollBoxes2() {
                 tint = tint3.value
             )
 
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint2.value
-            )
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint2.value
-            )
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint2.value
-            )
-            Text(text = " 0.0")
+            RankIcon(rank = 0.0)
             Text(
                 text = "　女子トイレに間違って行っちゃいました",
                 fontSize = 22.sp,
@@ -192,19 +145,7 @@ fun ScrollBoxes2() {
                 tint = tint3.value
             )
 
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint1.value
-            )
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint1.value
-            )
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint2.value
-            )
-            Text(text = " 2.0")
+            RankIcon(rank = 2.0)
             Text(
                 text = "　すげー",
                 fontSize = 22.sp,
@@ -223,19 +164,7 @@ fun ScrollBoxes2() {
                 tint = tint3.value
             )
 
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint1.value
-            )
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint1.value
-            )
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint2.value
-            )
-            Text(text = " 2.0")
+            RankIcon(rank = 2.0)
             Text(
                 text = "　ええやん",
                 fontSize = 22.sp,
@@ -254,19 +183,7 @@ fun ScrollBoxes2() {
                 tint = tint3.value
             )
 
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint1.value
-            )
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint1.value
-            )
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint2.value
-            )
-            Text(text = " 2.0")
+            RankIcon(rank = 2.0)
             Text(
                 text = "　いいね！",
                 fontSize = 22.sp,

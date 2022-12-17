@@ -46,8 +46,10 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
             // トイレ画像
-            ScrollBoxes3(id = R.drawable.toilet5f_1, id2 = R.drawable.toilet5f_1_dai,
-                id3 = R.drawable.toilet5f_1_shou, filedescription = "toilet image")
+            ScrollBoxes3(
+                id = R.drawable.toilet5f_1, id2 = R.drawable.toilet5f_1_dai,
+                id3 = R.drawable.toilet5f_1_shou, filedescription = "toilet image"
+            )
 
             Column(
                 modifier = Modifier
@@ -60,19 +62,7 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                     horizontalArrangement = Arrangement.Center
                 ) {
                     // レビュー評価
-                    Icon(
-                        Icons.Filled.Star, contentDescription = "お気に入り",
-                        tint = tint1.value
-                    )
-                    Icon(
-                        Icons.Filled.Star, contentDescription = "お気に入り",
-                        tint = tint1.value
-                    )
-                    Icon(
-                        Icons.Filled.Star, contentDescription = "お気に入り",
-                        tint = tint2.value
-                    )
-                    Text(text = " 2.0")
+                    RankIcon(rank = 2.9)
                 }
 
                 Row(
@@ -80,7 +70,7 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                         .fillMaxWidth()
                         .padding(top = 5.dp),
                     horizontalArrangement = Arrangement.Center
-                ){
+                ) {
                     // 備考
                     Text(text = "備考")
                 }
@@ -89,7 +79,7 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                         .fillMaxWidth()
                         .padding(top = 5.dp),
                     horizontalArrangement = Arrangement.Center
-                ){
+                ) {
                     // 備考
                     Text(text = "女子トイレと男子トイレを間違えやすい")
                 }
@@ -127,21 +117,21 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
             IconButtonSample_5F(R.drawable.urinal_no5, "s_button", toiletSize) {}
         }
 
-        Row (
+        Row(
             modifier = Modifier
                 .fillMaxWidth(),
             horizontalArrangement = Arrangement.Center
-        ){
+        ) {
             Text(text = "〇・・・空　×・・・満")
         }
-        
+
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = 15.dp),
             horizontalArrangement = Arrangement.SpaceEvenly
-        ){
-            Column (){
+        ) {
+            Column() {
                 Button(onClick = {}) {
                     Text(text = "予約")
                 }
@@ -153,7 +143,7 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                 Row(
                     modifier = Modifier
                         .padding(top = 5.dp)
-                ){
+                ) {
                     Image(
                         painter = painterResource(R.drawable.toiletpaper),
                         contentDescription = "toiletpaper",
@@ -183,14 +173,14 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = 15.dp)
-        ){
+        ) {
             Text(text = "レビュー")
         }
 
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-        ){
+        ) {
             IconToggleButtonSample()
             IconToggleButtonSample()
             IconToggleButtonSample()
@@ -199,14 +189,14 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-        ){
+        ) {
             Text(text = "星をタップしてください")
         }
 
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-        ){
+        ) {
             Text(text = "レビューを投稿できます")
         }
 
@@ -215,10 +205,11 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-        ){
+        ) {
             Text(text = "みんなのレビュー")
         }
 
         ScrollBoxes2()
     }
+}
 
