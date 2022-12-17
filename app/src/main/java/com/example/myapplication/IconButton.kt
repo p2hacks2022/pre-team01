@@ -1,13 +1,16 @@
 package com.example.myapplication.ui.theme
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.IconButton
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 
@@ -116,11 +119,26 @@ fun IconButtonSample_R2F(fileid: Int, filedescription: String, toNextScreen: (St
 
 @Composable
 fun IconButtonSample_rank(fileid: Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
-    IconButton(onClick = { toNextScreen("rank") }) {
-        Image(
-            painter = painterResource(fileid),
-            contentDescription = filedescription
-        )
+    Box(
+        contentAlignment = Alignment.Center,
+        modifier = Modifier
+            .width(220.dp)
+            .height(80.dp)
+            .clip(RoundedCornerShape(10.dp))
+            .background(Color(0x00000000))
+            .border(width = 2.dp, color = Color.DarkGray, shape = RoundedCornerShape(10.dp))
+    ) {
+        IconButton(
+            onClick = { toNextScreen("rank") },
+            modifier = Modifier
+                .width(200.dp)
+                .height(100.dp)
+        ) {
+            Image(
+                painter = painterResource(fileid),
+                contentDescription = filedescription,
+            )
+        }
     }
 }
 
