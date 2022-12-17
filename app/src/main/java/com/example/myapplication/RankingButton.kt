@@ -17,6 +17,6 @@ fun RankingButton(fileid1:Int,fileid2:Int,fileid3:Int, filedescription: String, 
         modifier = Modifier
             .size(photosize2.dp)) {
 
-        ScrollBoxes3(fileid1,fileid2, fileid3, "toilet-picture")
+        ScrollBoxes3(fileid1,fileid2, fileid3, "toilet-picture", 140)
     }
 }
