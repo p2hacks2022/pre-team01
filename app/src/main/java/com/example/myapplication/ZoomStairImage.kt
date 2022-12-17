@@ -76,7 +76,7 @@ fun rememberZoomState(maxScale: Float) = remember { ZoomState(maxScale) }
 
 @Composable
 fun ZoomImageSample() {
-    val painter = painterResource(id = R.drawable.fun_5)
+    val painter = painterResource(id = R.drawable.detail_ver2)
     val zoomState = rememberZoomState(maxScale = 5f)
     zoomState.setImageSize(painter.intrinsicSize)
     Image(
