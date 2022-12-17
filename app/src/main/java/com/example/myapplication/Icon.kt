@@ -34,86 +34,88 @@ fun RankIcon(rank: Double){
         Row() {
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
-                modifier = Modifier.size(10.dp),
                 tint = tint2.value
             )
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
-                modifier = Modifier.size(10.dp),
                 tint = tint2.value
             )
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
-                modifier = Modifier.size(10.dp),
                 tint = tint2.value
             )
             Text(
-                "$rank"
+                "$rank",
+                modifier = Modifier
+                    .padding(
+                        top = 5.dp
+                    )
             )
         }
     } else if(rank >= 1.0 && rank < 2.0){
         Row() {
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
-                modifier = Modifier.size(10.dp),
                 tint = tint1.value
             )
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
-                modifier = Modifier.size(10.dp),
                 tint = tint2.value
             )
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
-                modifier = Modifier.size(10.dp),
                 tint = tint2.value
             )
             Text(
-                "$rank"
+                "$rank",
+                modifier = Modifier
+                    .padding(
+                        top = 5.dp
+                    )
             )
         }
     } else if(rank >= 2.0 && rank < 3.0){
         Row() {
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
-                modifier = Modifier.size(10.dp),
                 tint = tint1.value
             )
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
-                modifier = Modifier.size(10.dp),
                 tint = tint1.value
             )
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
-                modifier = Modifier.size(10.dp),
                 tint = tint2.value
             )
             Text(
                 "$rank",
-                       // fontSize = 10.sp
+                modifier = Modifier
+                    .padding(
+                        top = 5.dp
+                    )
             )
         }
     } else if(rank == 3.0) {
         Row() {
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
-                modifier = Modifier.size(10.dp),
                 tint = tint1.value
             )
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
-                modifier = Modifier.size(10.dp),
                 tint = tint1.value
             )
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
-                modifier = Modifier.size(10.dp),
                 tint = tint1.value
             )
             Text(
                 "$rank",
-            //fontSize = 10.sp
+                modifier = Modifier
+                    .padding(
+                        top = 5.dp
+                    )
             )
         }
     }

@@ -24,9 +24,9 @@ import androidx.compose.ui.unit.sp
 val titlesize = 120
 val subtitlesize = 25
 val textsize = 15
-val iconsize = 30
+val iconsize = 45
 val photosize = 140
-val space = 25
+val space = 20
 
 @Preview
 @Composable
@@ -78,15 +78,6 @@ fun ScreenRank(toNextScreen: () -> Unit = {}) {
         }
 
     }
-
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Bottom
-    ) {
-        Button(onClick = { toNextScreen() }) {
-            Text(text = "Back")
-        }
-    }
 }
 
 @Composable
@@ -129,6 +120,10 @@ fun Mantoilet() {
         )
         Text(
             text = "男子トイレ",
+            modifier = Modifier
+                .padding(
+                    top = 7.dp
+                ),
             fontSize = subtitlesize.sp
         )
     }
@@ -145,6 +140,10 @@ fun Womantoilet() {
         )
         Text(
             text = "女子トイレ",
+            modifier = Modifier
+            .padding(
+                top = 7.dp
+                ),
             fontSize = subtitlesize.sp
         )
     }
