@@ -103,7 +103,7 @@ fun Screen5F(toNextScreen: (String)->Unit = {}) {
         Text(text = "5F")
         ZoomImageSample()
         Box(){
-            IconButtonToilet("toilet1",R.drawable.a,"toile" )
+            IconButtonToilet("toilet1",R.drawable.a,"toile" ) { toNextScreen("toilet1") }
             Text(text = "toile1")
         }
         Box(){
