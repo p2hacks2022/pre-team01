@@ -37,7 +37,7 @@ fun MainScreen(toNextScreen: (String) -> Unit = {}) {
         verticalAlignment = Alignment.CenterVertically
     ) {
         Column() {
-            IconButtonSample_5F(R.drawable.fun_5floar, "5F") { toNextScreen("5F") }
+            IconButtonSample_5F(R.drawable.fun_5floar, "5F", 120) { toNextScreen("5F") }
             IconButtonSample_4F(R.drawable.fun_4floar, "4F") { toNextScreen("4F") }
             IconButtonSample_3F(R.drawable.fun_3floar, "3F") { toNextScreen("3F") }
             IconButtonSample_2F(R.drawable.fun_2floar, "2F") { toNextScreen("2F") }
@@ -150,19 +150,14 @@ fun Screen5F(toNextScreen: (String) -> Unit = {}) {
             IconButtonGender(number = "③", gender = "Woman", fontSize = fontSize, file = R.drawable.woman)
             IconButtonGender(number = "③", gender = "Accessible", fontSize = fontSize, file = R.drawable.wheelchair_man)
         }
+    }
 
-        Row(
-            Modifier
-                .fillMaxSize(),
-            verticalAlignment = Alignment.Bottom
-        ) {
-            Button(
-                onClick = { toNextScreen("main") },
-                Modifier.padding(10.dp)
-            ) {
-                Text(text = "Back")
-            }
-
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Bottom
+    ) {
+        Button(onClick = { toNextScreen}) {
+            Text(text = "Back")
         }
     }
 }

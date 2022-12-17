@@ -175,7 +175,7 @@ fun ScrollBoxes2() {
             )
             Text(text = " 2.0")
             Text(
-                text = "　女子トイレに間違ってあ行っちゃいました",
+                text = "　女子トイレに間違って行っちゃいました",
                 fontSize = 22.sp,
                 color = Color.White,
                 modifier = Modifier.clickable {
