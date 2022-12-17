@@ -14,10 +14,18 @@ import com.example.myapplication.ui.theme.*
 
 @Composable
 fun MainScreen(toNextScreen: (String) -> Unit = {}) {
-    Image(
-        painter = painterResource(R.drawable.logo_ver1),
-        contentDescription = "logo",
-    )
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Image(
+            painter = painterResource(R.drawable.logo_ver1),
+            contentDescription = "logo",
+            modifier = Modifier
+                .width(260.dp)
+                .height(100.dp)
+        )
+    }
     Row(
         modifier = Modifier.fillMaxSize(),
         horizontalArrangement = Arrangement.SpaceEvenly,
@@ -98,21 +106,31 @@ fun Screen5F(toNextScreen: (String)->Unit = {}) {
                 .fillMaxSize(),
             verticalAlignment = Alignment.Bottom ,
         ) {
-            Button(onClick = { toNextScreen("toilet1") },
-                Modifier.padding(10.dp)) {
-                Text(text = "Toilet1")
-            }
-            Button(onClick = { toNextScreen("toilet2") },
-                Modifier.padding(10.dp)) {
-                Text(text = "Toilet2")
-            }
-            Button(onClick = { toNextScreen("toilet3") },
-                Modifier.padding(10.dp)) {
-                Text(text = "Toilet3")
-            }
-            Button(onClick = { toNextScreen("main") },
-                Modifier.padding(10.dp)) {
-                Text(text = "Back")
+            Column() {
+                Button(
+                    onClick = { toNextScreen("toilet1") },
+                    Modifier.padding(10.dp)
+                ) {
+                    Text(text = "Toilet1")
+                }
+                Button(
+                    onClick = { toNextScreen("toilet2") },
+                    Modifier.padding(10.dp)
+                ) {
+                    Text(text = "Toilet2")
+                }
+                Button(
+                    onClick = { toNextScreen("toilet3") },
+                    Modifier.padding(10.dp)
+                ) {
+                    Text(text = "Toilet3")
+                }
+                Button(
+                    onClick = { toNextScreen("main") },
+                    Modifier.padding(10.dp)
+                ) {
+                    Text(text = "Back")
+                }
             }
 
         }
