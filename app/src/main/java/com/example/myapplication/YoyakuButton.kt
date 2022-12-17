@@ -4,6 +4,7 @@ import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Button
 import androidx.compose.material.Icon
 import androidx.compose.material.IconToggleButton
@@ -14,6 +15,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.myapplication.ui.theme.IconButtonSample_5F
 
 @Preview(showBackground = true)
@@ -60,12 +62,23 @@ fun YoyakuButtons() {
 fun Yoyaku(change: (Int) -> Unit = {}){
     var showText by remember{mutableStateOf(true)}
     Column{
-        Button(onClick={
+        Button(
+            onClick={
             showText=!showText
             change(1)
-        }){Text(text="予約")}
+        },modifier = Modifier
+            .padding(
+                start = 30.dp
+            )
+        ){Text(text="予約")}
         if(!showText){
-            Text(text="予約されました")
+            Text(
+                text="予約されました",
+                modifier = Modifier
+                    .padding(
+                        start = 15.dp
+                    )
+            )
         }
 
     }
