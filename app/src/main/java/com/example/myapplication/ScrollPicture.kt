@@ -18,7 +18,7 @@ import com.example.myapplication.iconsize
 import com.example.myapplication.textsize
 
 
-val photosize =140
+val photosize =100
 
 
 @Composable
