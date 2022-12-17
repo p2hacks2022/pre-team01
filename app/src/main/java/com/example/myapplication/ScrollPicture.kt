@@ -19,6 +19,8 @@ import com.example.myapplication.photosize
 import com.example.myapplication.textsize
 
 
+val photosize_width = 100
+val photosize_height = 75
 
 @Composable
 fun ScrollBoxes3(id:Int, id2:Int, id3:Int, filedescription:String) {
@@ -26,7 +28,7 @@ fun ScrollBoxes3(id:Int, id2:Int, id3:Int, filedescription:String) {
     Row(
         //horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
-            .size(photosize.dp)
+            .size(photosize_width.dp, photosize_height.dp)
             .horizontalScroll(rememberScrollState())
             .background(Color.Gray)
             //.padding(15.dp, 0.dp),
@@ -38,19 +40,19 @@ fun ScrollBoxes3(id:Int, id2:Int, id3:Int, filedescription:String) {
             painter = painterResource(id),
             contentDescription = filedescription,
             modifier = Modifier
-                .size(photosize.dp)
+                .size(photosize_width.dp, photosize_height.dp)
         )
         Image(
             painter = painterResource(id2),
             contentDescription = filedescription,
             modifier = Modifier
-                .size(photosize.dp)
+                .size(photosize_width.dp, photosize_height.dp)
         )
         Image(
             painter = painterResource(id3),
             contentDescription = filedescription,
             modifier = Modifier
-                .size(photosize.dp)
+                .size(photosize_width.dp, photosize_height.dp)
         )
     }
 

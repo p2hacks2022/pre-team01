@@ -74,11 +74,11 @@ fun ScrollBoxes2() {
             )
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint2.value
+                tint = tint1.value
             )
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint2.value
+                tint = tint1.value
             )
             Text(text = " 3.0")
             Text(
@@ -101,17 +101,17 @@ fun ScrollBoxes2() {
 
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint2.value
+                tint = tint1.value
             )
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint2.value
+                tint = tint1.value
             )
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint2.value
+                tint = tint1.value
             )
-            Text(text = " 0")
+            Text(text = " 3.0")
             Text(
                 text = "　  素晴らしい",
                 fontSize = 22.sp,
@@ -163,17 +163,17 @@ fun ScrollBoxes2() {
 
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint1.value
-            )
-            Icon(
-                Icons.Filled.Star, contentDescription = "お気に入り",
-                tint = tint1.value
+                tint = tint2.value
             )
             Icon(
                 Icons.Filled.Star, contentDescription = "お気に入り",
                 tint = tint2.value
             )
-            Text(text = " 2.0")
+            Icon(
+                Icons.Filled.Star, contentDescription = "お気に入り",
+                tint = tint2.value
+            )
+            Text(text = " 0.0")
             Text(
                 text = "　女子トイレに間違って行っちゃいました",
                 fontSize = 22.sp,

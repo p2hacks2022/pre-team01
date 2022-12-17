@@ -3,6 +3,7 @@ package com.example.myapplication
 import IconButtonGender
 import IconButtonToilet
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
@@ -10,6 +11,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -53,7 +55,7 @@ fun MainScreen(toNextScreen: (String) -> Unit = {}) {
         verticalArrangement = Arrangement.Bottom,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        IconButtonSample_rank(R.drawable.a, "rank") { toNextScreen("rank") }
+        IconButtonSample_rank(R.drawable.toileranking, "rank") { toNextScreen("rank") }
     }
 }
 
@@ -106,52 +108,99 @@ fun Screen5F(toNextScreen: (String) -> Unit = {}) {
         Modifier
             .fillMaxSize()
     ) {
-        Text(text = "5F")
-        ZoomImageSample()
+        Text(text = "5F", fontSize = 30.sp)
 
-
-        Row(
+        Box(
             modifier = Modifier
-                .padding(top = 145.dp)
-                .fillMaxWidth(),
-            horizontalArrangement = Arrangement.Center
-        ){
-            Text(text = "トイレを選択してください", fontSize = 20.sp)
+                .padding(top = 40.dp)
+        ) {
+            ZoomImageSample()
         }
 
         Row(
             modifier = Modifier
-                .padding(top = 5.dp)
-                .fillMaxWidth(),
+                .padding(top = 105.dp)
+                .fillMaxWidth()
+                .background(Color(0xFFFFEDDB)),
+            horizontalArrangement = Arrangement.Center
+        ) {
+            Text(text = "トイレを選択してください", fontSize = 20.sp, modifier = Modifier.padding(end = 10.dp))
+        }
+
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(Color(0xFFFFEDDB))
             //horizontalArrangement = Arrangement.SpaceEvenly
         ) {
 
-            IconButtonGender(number = "①", gender = "Man", fontSize = fontSize, file = R.drawable.man){ toNextScreen("toilet1") }
+            IconButtonGender(
+                number = "①",
+                gender = "Man",
+                fontSize = fontSize,
+                file = R.drawable.man
+            ) { toNextScreen("toilet1") }
 
-            IconButtonGender(number = "①", gender = "Woman", fontSize = fontSize, file = R.drawable.woman)
-            IconButtonGender(number = "①", gender = "Accessible", fontSize = fontSize, file = R.drawable.wheelchair_man)
+            IconButtonGender(
+                number = "①",
+                gender = "Woman",
+                fontSize = fontSize,
+                file = R.drawable.woman
+            ){ toNextScreen("toilet2")}
+            IconButtonGender(
+                number = "①",
+                gender = "Accessible",
+                fontSize = fontSize,
+                file = R.drawable.wheelchair_man
+            )
         }
 
         Row(
             modifier = Modifier
-                .fillMaxWidth(),
+                .fillMaxWidth()
+                .background(Color(0xFFFFEDDB)),
             //horizontalArrangement = Arrangement.SpaceEvenly,
         ) {
-            IconButtonGender(number = "②", gender = "Man", fontSize = fontSize, file = R.drawable.man)
-            IconButtonGender(number = "②", gender = "Woman", fontSize = fontSize, file = R.drawable.woman)
+            IconButtonGender(
+                number = "②",
+                gender = "Man",
+                fontSize = fontSize,
+                file = R.drawable.man
+            )
+            IconButtonGender(
+                number = "②",
+                gender = "Woman",
+                fontSize = fontSize,
+                file = R.drawable.woman
+            )
         }
 
         Row(
             modifier = Modifier
-                .fillMaxWidth(),
+                .fillMaxWidth()
+                .background(Color(0xFFFFEDDB)),
             //horizontalArrangement = Arrangement.SpaceEvenly,
         ) {
-            IconButtonGender(number = "③", gender = "Man", fontSize = fontSize, file = R.drawable.man)
-            IconButtonGender(number = "③", gender = "Woman", fontSize = fontSize, file = R.drawable.woman)
-            IconButtonGender(number = "③", gender = "Accessible", fontSize = fontSize, file = R.drawable.wheelchair_man)
+            IconButtonGender(
+                number = "③",
+                gender = "Man",
+                fontSize = fontSize,
+                file = R.drawable.man
+            )
+            IconButtonGender(
+                number = "③",
+                gender = "Woman",
+                fontSize = fontSize,
+                file = R.drawable.woman
+            )
+            IconButtonGender(
+                number = "③",
+                gender = "Accessible",
+                fontSize = fontSize,
+                file = R.drawable.wheelchair_man
+            )
         }
     }
-
 }
 
 
