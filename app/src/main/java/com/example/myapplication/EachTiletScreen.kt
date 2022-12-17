@@ -46,7 +46,8 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
             // トイレ画像
-            ScrollBoxes3(id = R.drawable.a, id2 = R.drawable.a, id3 = R.drawable.a, filedescription = "toilet image")
+            ScrollBoxes3(id = R.drawable.toilet5f_1, id2 = R.drawable.toilet5f_1_dai,
+                id3 = R.drawable.toilet5f_1_shou, filedescription = "toilet image")
 
             Column(
                 modifier = Modifier
@@ -73,11 +74,25 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                     )
                     Text(text = " 2.0")
                 }
-                // 備考
-                Text(text = "")
-                Text(text = "備考")
-                Text(text = "女子トイレと男子トイレを間違えやすい")
-                Text(text = "")
+
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 5.dp),
+                    horizontalArrangement = Arrangement.Center
+                ){
+                    // 備考
+                    Text(text = "備考")
+                }
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 5.dp),
+                    horizontalArrangement = Arrangement.Center
+                ){
+                    // 備考
+                    Text(text = "女子トイレと男子トイレを間違えやすい")
+                }
             }
         }
 
@@ -131,11 +146,35 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                     Text(text = "予約")
                 }
             }
-            Column() {
-                Text(text = "ペーパー状況")
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(text = "--ペーパー状況--")
+                Row(
+                    modifier = Modifier
+                        .padding(top = 5.dp)
+                ){
+                    Image(
+                        painter = painterResource(R.drawable.toiletpaper),
+                        contentDescription = "toiletpaper",
+                        modifier = Modifier.size(20.dp)
+                    )
+                    Image(
+                        painter = painterResource(R.drawable.toiletpaper),
+                        contentDescription = "toiletpaper",
+                        modifier = Modifier.size(20.dp)
+                    )
+                    Image(
+                        painter = painterResource(R.drawable.toiletpaper_batu),
+                        contentDescription = "toiletpaper_batu",
+                        modifier = Modifier.size(20.dp)
+                    )
+                }
             }
-            Column() {
-                Text(text = "清掃状況")
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(text = "--清掃状況--")
                 Text(text = "２時間前")
             }
         }
@@ -182,7 +221,4 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
 
         ScrollBoxes2()
     }
-
-}
-
 
