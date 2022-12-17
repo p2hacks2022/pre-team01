@@ -14,10 +14,18 @@ import com.example.myapplication.ui.theme.*
 
 @Composable
 fun MainScreen(toNextScreen: (String) -> Unit = {}) {
-    Image(
-        painter = painterResource(R.drawable.logo_ver1),
-        contentDescription = "logo",
-    )
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Image(
+            painter = painterResource(R.drawable.logo_ver1),
+            contentDescription = "logo",
+            modifier = Modifier
+                .width(220.dp)
+                .height(100.dp)
+        )
+    }
     Row(
         modifier = Modifier.fillMaxSize(),
         horizontalArrangement = Arrangement.SpaceEvenly,
