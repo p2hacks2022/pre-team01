@@ -20,6 +20,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.myapplication.ui.theme.IconButtonSample_5F
+import com.example.myapplication.ui.theme.ScrollBoxes3
+import kotlinx.coroutines.NonCancellable.children
 
 
 @Preview
@@ -44,12 +46,7 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
             // トイレ画像
-            Image(
-                painter = painterResource(id = R.drawable.a),
-                modifier = Modifier
-                    .size(100.dp),
-                contentDescription = "toilet image"
-            )
+            ScrollBoxes3(id = R.drawable.a, id2 = R.drawable.a, id3 = R.drawable.a, filedescription = "toilet image")
 
             Column(
                 modifier = Modifier
