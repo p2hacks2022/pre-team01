@@ -48,7 +48,7 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
             // トイレ画像
             ScrollBoxes3(
                 id = R.drawable.toilet5f_1, id2 = R.drawable.toilet5f_1_dai,
-                id3 = R.drawable.toilet5f_1_shou, filedescription = "toilet image"
+                id3 = R.drawable.toilet5f_1_shou, filedescription = "toilet image", 100
             )
 
             Column(
