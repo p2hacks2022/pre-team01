@@ -15,12 +15,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.myapplication.iconsize
+import com.example.myapplication.photosize
 import com.example.myapplication.textsize
 
 
 val photosize_width = 100
 val photosize_height = 75
-
 
 @Composable
 fun ScrollBoxes3(id:Int, id2:Int, id3:Int, filedescription:String) {

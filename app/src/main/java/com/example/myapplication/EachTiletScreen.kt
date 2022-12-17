@@ -221,14 +221,4 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
 
         ScrollBoxes2()
     }
-}
 
-
-@Preview
-@Composable
-fun ScreenToilet2(toNextScreen: () -> Unit = {}) {
-}
-
-@Composable
-fun ScreenToilet3(toNextScreen: () -> Unit = {}) {
-}
