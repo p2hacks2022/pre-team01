@@ -152,14 +152,6 @@ fun Screen5F(toNextScreen: (String) -> Unit = {}) {
         }
     }
 
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Bottom
-    ) {
-        Button(onClick = { toNextScreen}) {
-            Text(text = "Back")
-        }
-    }
 }
 
 

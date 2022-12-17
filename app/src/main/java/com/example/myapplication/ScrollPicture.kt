@@ -15,10 +15,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.myapplication.iconsize
+import com.example.myapplication.photosize
 import com.example.myapplication.textsize
 
-
-val photosize =100
 
 
 @Composable

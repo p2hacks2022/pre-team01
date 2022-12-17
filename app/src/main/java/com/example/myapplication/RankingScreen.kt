@@ -21,12 +21,24 @@ val titlesize = 120
 val subtitlesize = 25
 val textsize = 15
 val iconsize =30
-val photosize =140
+val photosize
+
+
+
+
+
+
+
+
+
+
+
+=140
 val space = 25
 
 @Preview
 @Composable
-fun ScreenRank(toNextScreen: () -> Unit = {}) {
+fun ScreenRank(toNextScreen: (String) -> Unit = {}) {
     Column (
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Top
@@ -55,7 +67,7 @@ fun ScreenRank(toNextScreen: () -> Unit = {}) {
             modifier = Modifier.size(410.dp,(textsize + photosize + space).dp),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            Rank(R.drawable.gold_crown, name = "5階トイレ", R.drawable.crown, R.drawable.crown,R.drawable.crown,"5F")
+            Rank(R.drawable.gold_crown, name = "5階トイレ", R.drawable.crown, R.drawable.crown,R.drawable.crown,"5F"){toNextScreen("toilet1")}
             Rank(R.drawable.gold_crown, name = "5階トイレ", R.drawable.crown, R.drawable.crown,R.drawable.crown,"5F")
         }
         Row(
@@ -75,18 +87,10 @@ fun ScreenRank(toNextScreen: () -> Unit = {}) {
 
     }
 
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Bottom
-    ) {
-        Button(onClick = { toNextScreen() }) {
-            Text(text = "Back")
-        }
-    }
 }
 
 @Composable
-fun Rank(crownid:Int, name: String, fileid1:Int,fileid2:Int,fileid3:Int, filedescription: String) {
+fun Rank(crownid:Int, name: String, fileid1:Int,fileid2:Int,fileid3:Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
     Column(){
         Row{
             Image(
@@ -105,7 +109,9 @@ fun Rank(crownid:Int, name: String, fileid1:Int,fileid2:Int,fileid3:Int, filedes
                 )
             }
         }
-        ScrollBoxes3(fileid1,fileid2,fileid3,filedescription)
+        RankingButton(fileid1,fileid2,fileid3,filedescription){
+            toNextScreen("toilet1")
+        }
         /*
         Image(
             painter = painterResource(fileid),
