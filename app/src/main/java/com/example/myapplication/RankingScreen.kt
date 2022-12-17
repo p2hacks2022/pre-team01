@@ -13,22 +13,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.ui.unit.dp
 import androidx.compose.material.*
-
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Star
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.painter.Painter
-import androidx.compose.ui.platform.LocalConfiguration
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
-import com.example.myapplication.ui.theme.ScrollBoxes3
 
 val titlesize = 120
 val subtitlesize = 25
 val textsize = 15
 val iconsize = 45
 val photosize = 140
-val space = 20
+val space = 15
 
 @Composable
 fun ScreenRank(toNextScreen: (String) -> Unit = {}) {
@@ -92,7 +84,6 @@ fun ScreenRank(toNextScreen: (String) -> Unit = {}) {
 fun Rank(crownid:Int, name: String, fileid1:Int,fileid2:Int,fileid3:Int, filedescription: String,  rank: Double, toNextScreen: (String) -> Unit = {}) {
     Column{
         Row {
-
                     Image(
                         painter = painterResource(crownid),
                         contentDescription = null,
@@ -128,10 +119,6 @@ fun Rank(crownid:Int, name: String, fileid1:Int,fileid2:Int,fileid3:Int, filedes
                 )
                 Text(
                     text = "男子トイレ",
-                    modifier = Modifier
-                        .padding(
-                            top = 7.dp
-                        ),
                     fontSize = subtitlesize.sp
                 )
             }
@@ -148,10 +135,6 @@ fun Rank(crownid:Int, name: String, fileid1:Int,fileid2:Int,fileid3:Int, filedes
                 )
                 Text(
                     text = "女子トイレ",
-                    modifier = Modifier
-                        .padding(
-                            top = 7.dp
-                        ),
                     fontSize = subtitlesize.sp
                 )
             }
