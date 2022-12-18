@@ -52,7 +52,7 @@ ToiReView(トイレビュー)
 - シンプルなUI  
   - 直感的な操作をしやすくするために、あえてシンプルでわかりやすいUIを作った
 
-スクリーンショット(任意)  
+スクリーンショット   
 [RankingScreen](https://user-images.githubusercontent.com/120159025/208278013-0f82cedc-e5dd-4680-9423-45612593496d.png)  
 [ReviewScreen](https://user-images.githubusercontent.com/120159025/208278049-694ef2cf-6511-40d7-803c-10a7b4a9ac76.png)  
 [5FScreen](https://user-images.githubusercontent.com/120159025/208278059-e1ae4554-9075-4886-8b1b-9cad5eeb7928.png)  
