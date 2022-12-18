@@ -47,7 +47,10 @@ ToiReView(トイレビュー)
 - シンプルなUI
 
 スクリーンショット(任意)  
-[RankingScreen](https://user-images.githubusercontent.com/120159025/208278013-0f82cedc-e5dd-4680-9423-45612593496d.png) [ReviewScreen](https://user-images.githubusercontent.com/120159025/208278049-694ef2cf-6511-40d7-803c-10a7b4a9ac76.png) [5FScreen](https://user-images.githubusercontent.com/120159025/208278059-e1ae4554-9075-4886-8b1b-9cad5eeb7928.png) [HomeScreen](https://user-images.githubusercontent.com/120159025/208278063-24f2201b-915d-4821-935f-79729c5e9ca8.png)
+[RankingScreen](https://user-images.githubusercontent.com/120159025/208278013-0f82cedc-e5dd-4680-9423-45612593496d.png)  
+[ReviewScreen](https://user-images.githubusercontent.com/120159025/208278049-694ef2cf-6511-40d7-803c-10a7b4a9ac76.png)  
+[5FScreen](https://user-images.githubusercontent.com/120159025/208278059-e1ae4554-9075-4886-8b1b-9cad5eeb7928.png)  
+[HomeScreen](https://user-images.githubusercontent.com/120159025/208278063-24f2201b-915d-4821-935f-79729c5e9ca8.png)
 
 
 ## 開発体制  
@@ -84,5 +87,6 @@ Jetpack Compose
 その他開発に使用したツール・サービス  
 - Android Studio  
 - Adobe Illustrator  
+- Adobe PremiaPro
 - Office PowerPoint  
 - Google Pixel6a  
