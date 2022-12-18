@@ -76,45 +76,21 @@ fun MainScreen(toNextScreen: (String) -> Unit = {}) {
 // トイレごとに遷移する画面の設定（1F）
 @Composable
 fun Screen1F(toNextScreen: () -> Unit = {}) {
-    Column {
-        Text(text = "1F")
-        Button(onClick = { toNextScreen() }) {
-            Text(text = "Back")
-        }
-    }
 }
 
 // トイレごとに遷移する画面の設定（2F）
 @Composable
 fun Screen2F(toNextScreen: () -> Unit = {}) {
-    Column {
-        Text(text = "2F")
-        Button(onClick = { toNextScreen() }) {
-            Text(text = "Back")
-        }
-    }
 }
 
 // トイレごとに遷移する画面の設定（3F）
 @Composable
 fun Screen3F(toNextScreen: () -> Unit = {}) {
-    Column {
-        Text(text = "3F")
-        Button(onClick = { toNextScreen() }) {
-            Text(text = "Back")
-        }
-    }
 }
 
 // トイレごとに遷移する画面の設定（4F）
 @Composable
 fun Screen4F(toNextScreen: () -> Unit = {}) {
-    Column {
-        Text(text = "4F")
-        Button(onClick = { toNextScreen() }) {
-            Text(text = "Back")
-        }
-    }
 }
 
 // トイレごとに遷移する画面の設定（5F）
@@ -225,22 +201,10 @@ fun Screen5F(toNextScreen: (String) -> Unit = {}) {
 // トイレごとに遷移する画面の設定（R1F）
 @Composable
 fun ScreenR1F(toNextScreen: () -> Unit = {}) {
-    Column {
-        Text(text = "R1F")
-        Button(onClick = { toNextScreen() }) {
-            Text(text = "Back")
-        }
-    }
 }
 
 // トイレごとに遷移する画面の設定（R2F）
 @Composable
 fun ScreenR2F(toNextScreen: () -> Unit = {}) {
-    Column {
-        Text(text = "R2F")
-        Button(onClick = { toNextScreen() }) {
-            Text(text = "Back")
-        }
-    }
 }
 
