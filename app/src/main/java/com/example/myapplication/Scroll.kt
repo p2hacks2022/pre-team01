@@ -47,7 +47,7 @@ fun ScrollBoxes() {
 
             RankIcon(rank = 3.0)
             Text(
-                text = "　気もちよし！",
+                text = "　すげー",
                 fontSize = 22.sp,
                 color = Color.White,
                 modifier = Modifier.clickable {
@@ -64,7 +64,7 @@ fun ScrollBoxes() {
                 tint = tint3.value
             )
 
-            RankIcon(rank = 0.0)
+            RankIcon(rank = 2.0)
             Text(
                 text = "　女子トイレに間違って行っちゃいました",
                 fontSize = 22.sp,
@@ -102,9 +102,9 @@ fun ScrollBoxes() {
                 tint = tint3.value
             )
 
-            RankIcon(rank = 2.0)
+            RankIcon(rank = 3.0)
             Text(
-                text = "　ウォシュレット！",
+                text = "　手すりありがたい！",
                 fontSize = 22.sp,
                 color = Color.White,
                 modifier = Modifier.clickable {
@@ -121,9 +121,9 @@ fun ScrollBoxes() {
                 tint = tint3.value
             )
 
-            RankIcon(rank = 2.0)
+            RankIcon(rank = 3.0)
             Text(
-                text = "　すげー",
+                text = "　ウォシュレットキンモチェェェ！",
                 fontSize = 22.sp,
                 color = Color.White,
                 modifier = Modifier.clickable {
@@ -159,9 +159,28 @@ fun ScrollBoxes() {
                 tint = tint3.value
             )
 
+            RankIcon(rank = 3.0)
+            Text(
+                text = "　行きやすくてありがたい！",
+                fontSize = 22.sp,
+                color = Color.White,
+                modifier = Modifier.clickable {
+                    // 項目が押された時の処理
+                }
+            )
+        }
+
+        Row(
+            horizontalArrangement =  Arrangement.Center,
+        ){
+            Icon(
+                Icons.Filled.Person, contentDescription = "人",
+                tint = tint3.value
+            )
+
             RankIcon(rank = 2.0)
             Text(
-                text = "　いいね！",
+                text = "　住みごこちいいね",
                 fontSize = 22.sp,
                 color = Color.White,
                 modifier = Modifier.clickable {
