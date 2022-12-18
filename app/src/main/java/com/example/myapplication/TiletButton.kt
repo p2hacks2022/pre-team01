@@ -1,16 +1,13 @@
 package com.example.myapplication
 
 import androidx.compose.animation.animateColorAsState
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 
 /*
@@ -18,6 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 Icon(Icons.Default.Person,contentDescription="person")
 */
 
+// レビューを入力する機能
 @Composable
 fun Input(){
     var showText by remember{mutableStateOf(true)}
@@ -40,6 +38,7 @@ fun Input(){
     }
 }
 
+// レビューにて、☆をクリックするとエフェクトと同時に色が変化する機能
 @Preview(showBackground = true)
 @Composable
 fun IconToggleButtonSample() {

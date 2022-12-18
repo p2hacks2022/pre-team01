@@ -1,10 +1,8 @@
 package com.example.myapplication
 
 import IconButtonGender
-import IconButtonToilet
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
 import androidx.compose.material.Text
@@ -13,18 +11,18 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.myapplication.ui.theme.*
 
-
+// ホーム画面の設定
 @Composable
 fun MainScreen(toNextScreen: (String) -> Unit = {}) {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        // タイトルロゴを表示
         Image(
             painter = painterResource(R.drawable.logo_ver1),
             contentDescription = "logo",
@@ -33,6 +31,7 @@ fun MainScreen(toNextScreen: (String) -> Unit = {}) {
                 .height(120.dp)
         )
     }
+
     Row(
         modifier = Modifier.fillMaxSize(),
         horizontalArrangement = Arrangement.SpaceEvenly,
@@ -43,32 +42,38 @@ fun MainScreen(toNextScreen: (String) -> Unit = {}) {
                 .padding(bottom = 20.dp),
             verticalArrangement = Arrangement.Bottom
         ) {
+            // 本棟1F～5Fの階層選択ボタンを表示
             IconButtonSample_5F(R.drawable.fun_5floar, "5F", 120) { toNextScreen("5F") }
             IconButtonSample_4F(R.drawable.fun_4floar, "4F") { toNextScreen("4F") }
             IconButtonSample_3F(R.drawable.fun_3floar, "3F") { toNextScreen("3F") }
             IconButtonSample_2F(R.drawable.fun_2floar, "2F") { toNextScreen("2F") }
             IconButtonSample_1F(R.drawable.fun_1floar, "1F") { toNextScreen("1F") }
         }
+
         Column(
             modifier = Modifier
                 .fillMaxHeight()
                 .padding(top = 160.dp),
             verticalArrangement = Arrangement.Center
         ) {
+            // 研究棟1F～2Fの階層選択ボタンを表示
             IconButtonSample_R1F(R.drawable.fun_research1floar, "R1F") { toNextScreen("R1F") }
             IconButtonSample_R2F(R.drawable.fun_research2floar, "R2F") { toNextScreen("R2F") }
         }
     }
+
     Column(
         modifier = Modifier
             .fillMaxSize(),
         verticalArrangement = Arrangement.Bottom,
         horizontalAlignment = Alignment.End
     ) {
+        // ランキングに遷移するボタンを表示
         IconButtonSample_rank(R.drawable.toileranking_ver2, "rank") { toNextScreen("rank") }
     }
 }
 
+// トイレごとに遷移する画面の設定（1F）
 @Composable
 fun Screen1F(toNextScreen: () -> Unit = {}) {
     Column {
@@ -79,6 +84,7 @@ fun Screen1F(toNextScreen: () -> Unit = {}) {
     }
 }
 
+// トイレごとに遷移する画面の設定（2F）
 @Composable
 fun Screen2F(toNextScreen: () -> Unit = {}) {
     Column {
@@ -89,6 +95,7 @@ fun Screen2F(toNextScreen: () -> Unit = {}) {
     }
 }
 
+// トイレごとに遷移する画面の設定（3F）
 @Composable
 fun Screen3F(toNextScreen: () -> Unit = {}) {
     Column {
@@ -99,6 +106,7 @@ fun Screen3F(toNextScreen: () -> Unit = {}) {
     }
 }
 
+// トイレごとに遷移する画面の設定（4F）
 @Composable
 fun Screen4F(toNextScreen: () -> Unit = {}) {
     Column {
@@ -109,6 +117,7 @@ fun Screen4F(toNextScreen: () -> Unit = {}) {
     }
 }
 
+// トイレごとに遷移する画面の設定（5F）
 @Composable
 fun Screen5F(toNextScreen: (String) -> Unit = {}) {
 
@@ -213,7 +222,7 @@ fun Screen5F(toNextScreen: (String) -> Unit = {}) {
     }
 }
 
-
+// トイレごとに遷移する画面の設定（R1F）
 @Composable
 fun ScreenR1F(toNextScreen: () -> Unit = {}) {
     Column {
@@ -224,6 +233,7 @@ fun ScreenR1F(toNextScreen: () -> Unit = {}) {
     }
 }
 
+// トイレごとに遷移する画面の設定（R2F）
 @Composable
 fun ScreenR2F(toNextScreen: () -> Unit = {}) {
     Column {

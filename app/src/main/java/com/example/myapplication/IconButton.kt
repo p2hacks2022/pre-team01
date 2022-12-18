@@ -14,10 +14,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 
+// 階層選択のボタンを表示（1F）
 @Composable
 fun IconButtonSample_1F(fileid: Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
     IconButton(
-        onClick = { toNextScreen("1F")  },
+        onClick = { toNextScreen("1F") },
         modifier = Modifier
             .width(120.dp)
             .height(120.dp)
@@ -29,10 +30,11 @@ fun IconButtonSample_1F(fileid: Int, filedescription: String, toNextScreen: (Str
     }
 }
 
+// 階層選択のボタンを表示（2F）
 @Composable
 fun IconButtonSample_2F(fileid: Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
     IconButton(
-        onClick = { toNextScreen("2F")  },
+        onClick = { toNextScreen("2F") },
         modifier = Modifier
             .width(120.dp)
             .height(120.dp)
@@ -45,10 +47,11 @@ fun IconButtonSample_2F(fileid: Int, filedescription: String, toNextScreen: (Str
     }
 }
 
+// 階層選択のボタンを表示（3F）
 @Composable
 fun IconButtonSample_3F(fileid: Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
     IconButton(
-        onClick = { toNextScreen("3F")  },
+        onClick = { toNextScreen("3F") },
         modifier = Modifier
             .size(120.dp)
     ) {
@@ -59,10 +62,11 @@ fun IconButtonSample_3F(fileid: Int, filedescription: String, toNextScreen: (Str
     }
 }
 
+// 階層選択のボタンを表示（4F）
 @Composable
 fun IconButtonSample_4F(fileid: Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
     IconButton(
-        onClick = { toNextScreen("4F")  },
+        onClick = { toNextScreen("4F") },
         modifier = Modifier
             .size(120.dp)
     ) {
@@ -73,10 +77,16 @@ fun IconButtonSample_4F(fileid: Int, filedescription: String, toNextScreen: (Str
     }
 }
 
+// 階層選択のボタンを表示（5F）
 @Composable
-fun IconButtonSample_5F(fileid: Int, filedescription: String, size: Int, toNextScreen: (String) -> Unit = {}) {
+fun IconButtonSample_5F(
+    fileid: Int,
+    filedescription: String,
+    size: Int,
+    toNextScreen: (String) -> Unit = {}
+) {
     IconButton(
-        onClick = { toNextScreen("5F")  },
+        onClick = { toNextScreen("5F") },
         modifier = Modifier
             .size(size.dp)
     ) {
@@ -87,10 +97,15 @@ fun IconButtonSample_5F(fileid: Int, filedescription: String, size: Int, toNextS
     }
 }
 
+// 階層選択のボタンを表示（R1F）
 @Composable
-fun IconButtonSample_R1F(fileid: Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
+fun IconButtonSample_R1F(
+    fileid: Int,
+    filedescription: String,
+    toNextScreen: (String) -> Unit = {}
+) {
     IconButton(
-        onClick = { toNextScreen("R1F")  },
+        onClick = { toNextScreen("R1F") },
         modifier = Modifier
             .width(50.dp)
             .height(120.dp)
@@ -102,10 +117,15 @@ fun IconButtonSample_R1F(fileid: Int, filedescription: String, toNextScreen: (St
     }
 }
 
+// 階層選択のボタンを表示（R2F）
 @Composable
-fun IconButtonSample_R2F(fileid: Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
+fun IconButtonSample_R2F(
+    fileid: Int,
+    filedescription: String,
+    toNextScreen: (String) -> Unit = {}
+) {
     IconButton(
-        onClick = { toNextScreen("R2F")  },
+        onClick = { toNextScreen("R2F") },
         modifier = Modifier
             .width(70.dp)
             .height(120.dp)
@@ -117,8 +137,13 @@ fun IconButtonSample_R2F(fileid: Int, filedescription: String, toNextScreen: (St
     }
 }
 
+// ランキングに遷移するボタンを表示
 @Composable
-fun IconButtonSample_rank(fileid: Int, filedescription: String, toNextScreen: (String) -> Unit = {}) {
+fun IconButtonSample_rank(
+    fileid: Int,
+    filedescription: String,
+    toNextScreen: (String) -> Unit = {}
+) {
     Box(
         contentAlignment = Alignment.Center,
         modifier = Modifier
