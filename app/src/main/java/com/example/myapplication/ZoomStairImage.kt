@@ -2,7 +2,6 @@ package com.example.myapplication
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.gestures.detectTransformGestures
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -16,6 +15,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.max
 import androidx.compose.ui.unit.toSize
 import kotlin.math.max
+
+// 地図をズームする機能
 
 @Stable
 class ZoomState(private val maxScale: Float) {

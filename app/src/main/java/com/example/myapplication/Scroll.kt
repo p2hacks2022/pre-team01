@@ -8,7 +8,6 @@ import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -16,32 +15,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.myapplication.RankIcon
 
+// スクロールする画像などをまとめる
 @Composable
 fun ScrollBoxes() {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .fillMaxHeight(0.3f)
-            .verticalScroll(rememberScrollState())
-            .background(Color.Blue)
-            .padding(15.dp, 0.dp),
-
-        ) {
-        repeat(30) {
-            Text(
-                text = "リスト項目: $it",
-                fontSize = 22.sp,
-                color = Color.White,
-                modifier = Modifier.clickable {
-                    // 項目が押された時の処理
-                }
-            )
-        }
-    }
-}
-
-@Composable
-fun ScrollBoxes2() {
     val tint1 = animateColorAsState(
         Color(0xFFFFEB3B)
     )

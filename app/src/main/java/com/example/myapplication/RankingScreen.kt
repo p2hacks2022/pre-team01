@@ -22,6 +22,7 @@ val iconsize = 45
 val photosize = 140
 val space = 15
 
+// レビュー評価する画面を表示
 @Composable
 fun ScreenRank(toNextScreen: (String) -> Unit = {}) {
 
@@ -54,8 +55,24 @@ fun ScreenRank(toNextScreen: (String) -> Unit = {}) {
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
 
-            Rank(R.drawable.gold_crown, name = "5F講堂前トイレ", R.drawable.toilet5f_1_shou, R.drawable.toilet5f_1_dai,R.drawable.toilet5f_1,"5F", 2.9){toNextScreen("toilet1")}
-            Rank(R.drawable.gold_crown, name = "5F講堂前トイレ", R.drawable.toilet5f_1, R.drawable.noimage,R.drawable.noimage,"5F", 3.0)
+            Rank(
+                R.drawable.gold_crown,
+                name = "5F講堂前トイレ",
+                R.drawable.toilet5f_1_shou,
+                R.drawable.toilet5f_1_dai,
+                R.drawable.toilet5f_1,
+                "5F",
+                2.9
+            ) { toNextScreen("toilet1") }
+            Rank(
+                R.drawable.gold_crown,
+                name = "5F講堂前トイレ",
+                R.drawable.toilet5f_1,
+                R.drawable.noimage,
+                R.drawable.noimage,
+                "5F",
+                3.0
+            )
 
         }
         Row(
@@ -63,8 +80,24 @@ fun ScreenRank(toNextScreen: (String) -> Unit = {}) {
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
 
-            Rank(R.drawable.silver_crown, name = "5F東トイレ　　", R.drawable.toilet5f_2_door, R.drawable.toilet5f_2_dai,R.drawable.toilet5f_2_shou,"5F", 2.8)
-            Rank(R.drawable.silver_crown, name = "5F東トイレ　　", R.drawable.noimage, R.drawable.noimage,R.drawable.noimage,"5F", 2.5)
+            Rank(
+                R.drawable.silver_crown,
+                name = "5F東トイレ　　",
+                R.drawable.toilet5f_2_door,
+                R.drawable.toilet5f_2_dai,
+                R.drawable.toilet5f_2_shou,
+                "5F",
+                2.8
+            )
+            Rank(
+                R.drawable.silver_crown,
+                name = "5F東トイレ　　",
+                R.drawable.noimage,
+                R.drawable.noimage,
+                R.drawable.noimage,
+                "5F",
+                2.5
+            )
 
         }
         Row(
@@ -72,73 +105,100 @@ fun ScreenRank(toNextScreen: (String) -> Unit = {}) {
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
 
-            Rank(R.drawable.bronze_crown, name = "5F西トイレ　　", R.drawable.toilet5f_3_door,R.drawable.toilet5f_3_dai,R.drawable.toilet5f_3_shou, "5F", 1.7)
-            Rank(R.drawable.bronze_crown, name = "5F西トイレ　　", R.drawable.toilet5f_3_door_w,R.drawable.noimage,R.drawable.noimage, "5F", 2.4)
+            Rank(
+                R.drawable.bronze_crown,
+                name = "5F西トイレ　　",
+                R.drawable.toilet5f_3_door,
+                R.drawable.toilet5f_3_dai,
+                R.drawable.toilet5f_3_shou,
+                "5F",
+                1.7
+            )
+            Rank(
+                R.drawable.bronze_crown,
+                name = "5F西トイレ　　",
+                R.drawable.toilet5f_3_door_w,
+                R.drawable.noimage,
+                R.drawable.noimage,
+                "5F",
+                2.4
+            )
 
         }
 
     }
 }
 
+// 順位・場所・画像を表示
 @Composable
-fun Rank(crownid:Int, name: String, fileid1:Int,fileid2:Int,fileid3:Int, filedescription: String,  rank: Double, toNextScreen: (String) -> Unit = {}) {
-    Column{
+fun Rank(
+    crownid: Int,
+    name: String,
+    fileid1: Int,
+    fileid2: Int,
+    fileid3: Int,
+    filedescription: String,
+    rank: Double,
+    toNextScreen: (String) -> Unit = {}
+) {
+    Column {
         Row {
-                    Image(
-                        painter = painterResource(crownid),
-                        contentDescription = null,
-                        modifier = Modifier
-                            .size(iconsize.dp)
-                    )
-                    Column() {
-                        Text(
-                            text = " $name",
-                            fontSize = textsize.sp
-                        )
-                        RankIcon(rank)
-                    }
-                }
+            Image(
+                painter = painterResource(crownid),
+                contentDescription = null,
+                modifier = Modifier
+                    .size(iconsize.dp)
+            )
+            Column() {
+                Text(
+                    text = " $name",
+                    fontSize = textsize.sp
+                )
+                RankIcon(rank)
+            }
+        }
 
-                RankingButton(fileid1, fileid2, fileid3, filedescription) {
-                    toNextScreen("toilet1")
-                }
-
+        RankingButton(fileid1, fileid2, fileid3, filedescription) {
+            toNextScreen("toilet1")
         }
 
     }
 
+}
 
-        @Composable
-        fun Mantoilet() {
-            Row {
-                Image(
-                    painter = painterResource(R.drawable.man),
-                    contentDescription = null,
-                    modifier = Modifier
-                        .size(iconsize.dp)
-                )
-                Text(
-                    text = "男子トイレ",
-                    fontSize = subtitlesize.sp
-                )
-            }
-        }
+// 「男子トイレ」と画像をくっつける
+@Composable
+fun Mantoilet() {
+    Row {
+        Image(
+            painter = painterResource(R.drawable.man),
+            contentDescription = null,
+            modifier = Modifier
+                .size(iconsize.dp)
+        )
+        Text(
+            text = "男子トイレ",
+            fontSize = subtitlesize.sp
+        )
+    }
+}
 
-        @Composable
-        fun Womantoilet() {
-            Row {
-                Image(
-                    painter = painterResource(R.drawable.woman),
-                    contentDescription = null,
-                    modifier = Modifier
-                        .size(iconsize.dp)
-                )
-                Text(
-                    text = "女子トイレ",
-                    fontSize = subtitlesize.sp
-                )
-            }
-        }
+// 「女子トイレ」と画像をくっつける
+@Composable
+fun Womantoilet() {
+    Row {
+        Image(
+            painter = painterResource(R.drawable.woman),
+            contentDescription = null,
+            modifier = Modifier
+                .size(iconsize.dp)
+        )
+        Text(
+            text = "女子トイレ",
+            fontSize = subtitlesize.sp
+        )
+    }
+}
 
 
 

@@ -1,30 +1,22 @@
 package com.example.myapplication
 
-import ScrollBoxes2
+import ScrollBoxes
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.Button
-import androidx.compose.material.Icon
 import androidx.compose.material.Text
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalConfiguration
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.myapplication.ui.theme.IconButtonSample_5F
 import com.example.myapplication.ui.theme.ScrollBoxes3
-import kotlinx.coroutines.NonCancellable.children
 
 
+// レビュー画面を表示（5F-トイレ1）
 @Preview
 @Composable
 fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
@@ -46,7 +38,7 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                 .padding(start = 5.dp),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            // トイレ画像
+            // トイレの画像
             ScrollBoxes3(
                 id = R.drawable.toilet5f_1, id2 = R.drawable.toilet5f_1_dai,
                 id3 = R.drawable.toilet5f_1_shou, filedescription = "toilet image", 170
@@ -75,12 +67,12 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                     // 備考
                     Text(text = "※備考")
                 }
+                // 備考欄（以下数行）
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(top = 5.dp, start = 15.dp, end = 5.dp),
                 ) {
-                    // 備考
                     Text(text = "・女子トイレと男子トイレを間")
                 }
                 Row(
@@ -88,7 +80,6 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                         .fillMaxWidth()
                         .padding(top = 5.dp, start = 30.dp, end = 5.dp),
                 ) {
-                    // 備考
                     Text(text = "違えやすい")
                 }
                 Row(
@@ -96,7 +87,6 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                         .fillMaxWidth()
                         .padding(top = 5.dp, start = 15.dp, end = 5.dp),
                 ) {
-                    // 備考
                     Text(text = "・利用者が多い")
                 }
             }
@@ -107,6 +97,7 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                 .fillMaxWidth()
                 .padding(start = 40.dp)
         ) {
+            // レビュー評価を表示
             RankIcon(rank = 2.9)
         }
 
@@ -134,10 +125,10 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                 .padding(top = 15.dp),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
+                // トイレットペーパー在庫数を表示
                 Text(text = "--ペーパー状況--", fontSize = 23.sp)
                 Row(
                     modifier = Modifier
@@ -176,6 +167,7 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
             Text(text = "レビュー")
         }
 
+        // レビューの評価を入力
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -197,6 +189,7 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
             }
         }
 
+        // レビューのコメント入力
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -219,8 +212,11 @@ fun ScreenManToilet1(toNextScreen: () -> Unit = {}) {
                 .fillMaxWidth()
                 .padding(start = 5.dp, end = 5.dp)
         ) {
-            ScrollBoxes2()
+            ScrollBoxes()
         }
     }
 }
 
+// レビュー画面を表示（5F-トイレ2）
+
+// レビュー画面を表示（5F-トイレ3）

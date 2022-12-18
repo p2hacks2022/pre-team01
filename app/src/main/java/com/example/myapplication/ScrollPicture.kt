@@ -2,23 +2,13 @@ package com.example.myapplication.ui.theme
 
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Icon
-import androidx.compose.material.Text
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import com.example.myapplication.iconsize
-import com.example.myapplication.photosize
-import com.example.myapplication.textsize
 
-
+// スクロールする画像などを列挙
 @Composable
 fun ScrollBoxes3(id:Int, id2:Int, id3:Int, filedescription:String, photosize_width:Int) {
 

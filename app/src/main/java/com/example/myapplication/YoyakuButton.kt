@@ -1,23 +1,18 @@
 package com.example.myapplication
 
-import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Button
-import androidx.compose.material.Icon
-import androidx.compose.material.IconToggleButton
 import androidx.compose.material.Text
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.myapplication.ui.theme.IconButtonSample_5F
 
+// 予約ボタンの機能
 @Preview(showBackground = true)
 @Composable
 fun YoyakuButtons() {
@@ -58,6 +53,7 @@ fun YoyakuButtons() {
 
 }
 
+// 予約機能
 @Composable
 fun Yoyaku(change: (Int) -> Unit = {}){
     var showText by remember{mutableStateOf(true)}
